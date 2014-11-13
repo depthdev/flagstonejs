@@ -25,7 +25,7 @@
 
 <article>
   <h3>JavaScript</h3>
-  <p>Initialize a Flagstone instance and pass in the required properties</p>
+  <p>Initialize a Flagstone instance and pass in the <em>optional</em> properties</p>
   <code>
    <p><strong>var fs = new FLAGSTONE();</strong></p>
    <p>OR</p>
