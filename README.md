@@ -25,5 +25,6 @@
     <p><strong>});</p>
   </code>
   
-  <p><em>If using AngularJS, you can use the "reset" method during your callback; i.e. <strong>fs.reset();</strong></em></p>
+  <p><em>Soft reset: <strong>fs.reset();</strong></em></p>
+  <p><em>Hard reset: <strong>fs.reset();</strong></em> // Typically used for dynamic content such as on an AngularJS callback, or any other JavaScript injected content.</p>
 </article>
