@@ -26,5 +26,5 @@
   </code>
   
   <p><em>Soft reset: <strong>fs.reset();</strong></em></p>
-  <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamic content such as on an AngularJS callback, or any other injected content.</p>
+  <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamic content such as an AngularJS callback, or any other injected content.</p>
 </article>
