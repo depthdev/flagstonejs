@@ -15,11 +15,11 @@
   <p>Initialize a Flagstone instance and pass in the required properties</p>
   <code>
     <p>var fs = new FLAGSTONE({</p>
-      <p>&#160;&#160;area: $('.js-floor'),</p> // Wrapping element
-      <p>&#160;&#160;flagstones: $('.js-tile'),</p> // Tilable elements
-      <p>&#160;&#160;minWidth: 300,</p> // Minimum width you want the tilable elements (pixels as int)
-      <p>&#160;&#160;margin: 10</p> // Margin between tilable elements (pixels as int)
-      <p>&#160;&#160;duration: 2000</p> // Animation duration  (milliseconds as int)
+      <p>&#160;&#160;area: $('.js-floor'), <em>// Wrapping element</em></p>
+      <p>&#160;&#160;flagstones: $('.js-tile'), <em>// Tilable elements</em></p>
+      <p>&#160;&#160;minWidth: 300, <em>// Minimum width you want the tilable elements (pixels as int)</em></p>
+      <p>&#160;&#160;margin: 10 <em>// Margin between tilable elements (pixels as int)</em></p>
+      <p>&#160;&#160;duration: 2000 <em>// Animation duration  (milliseconds as int)</em></p>
     <p>});</p>
   </code>
   
