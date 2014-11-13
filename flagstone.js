@@ -24,7 +24,9 @@ var FLAGSTONE = function(options) {
   // MIN WIDTH
   this.minWidth = obj.minWidth || 280;
   // COLUMNS
-  this.columns = Math.floor(this.areaWidth / this.minWidth);
+  this.maxColumns = obj.maxColumns || 1920;
+  this.calcColumns = Math.floor(this.areaWidth / this.minWidth);
+  this.columns = this.calcColumns > this.maxColumns ? this.maxColumns : this.calcColumns;
   // MARGIN
   this.margin = obj.margin || 10;
   // FLAGSTONES
@@ -80,7 +82,8 @@ var FLAGSTONE = function(options) {
   this.reset = function() {
     that.areaWidth = that.area.outerWidth();
     if (that.areaWidth < that.minWidth + (that.margin * 2)) {that.areaWidth = that.minWidth; }
-    that.columns = Math.floor(that.areaWidth / that.minWidth);
+    that.calcColumns = Math.floor(that.areaWidth / that.minWidth);
+    that.columns = that.calcColumns > that.maxColumns ? that.maxColumns : that.calcColumns;
     that.flagstoneWidth = (that.areaWidth / that.columns) - ((that.margin * (that.columns + 1)) / that.columns);
     while(that.flagstoneHeights.length > 0) { that.flagstoneHeights.pop(); }
     that.flagstones.each(function() {
