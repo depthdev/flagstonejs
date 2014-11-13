@@ -12,6 +12,13 @@
 </ul>
 
 <article>
+  <h3>HTML</h3>
+  <p>These are the default selectors as attributes, but any selector can be used:</p>
+  &lt;ul flagstone&gt;
+</article>
+
+<article>
+  <h3>JavaScript</h3>
   <p>Initialize a Flagstone instance and pass in the required properties</p>
   <code>
    <p><strong>var fs = new FLAGSTONE();</strong></p>
