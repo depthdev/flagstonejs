@@ -36,7 +36,8 @@ var FLAGSTONE = function(options) {
   this.duration = obj.duration / 1000 || 1;
   // INITIALIZE THE OBJECT
   this.init = function() {
-    $('head').append('<style>'+this.areaStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}'+this.flagstonesStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0px;left:0px;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}</style>');
+    $('head').append('<style>'+this.areaStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;min-width:'+(this.minWidth+(this.margin*2))+'px;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}'+this.flagstonesStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0px;left:0px;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}</style>');
+    if (this.areaWidth < this.minWidth + (this.margin * 2)) {this.areaWidth = this.minWidth; }
     this.flagstones.each(function() {
       var self = $(this);
       self.css('width', that.flagstoneWidth + 'px');
@@ -78,6 +79,7 @@ var FLAGSTONE = function(options) {
   this.resetDelay2; // Makes CSS's animation top align correctly
   this.reset = function() {
     that.areaWidth = that.area.outerWidth();
+    if (that.areaWidth < that.minWidth + (that.margin * 2)) {that.areaWidth = that.minWidth; }
     that.columns = Math.floor(that.areaWidth / that.minWidth);
     that.flagstoneWidth = (that.areaWidth / that.columns) - ((that.margin * (that.columns + 1)) / that.columns);
     while(that.flagstoneHeights.length > 0) { that.flagstoneHeights.pop(); }
@@ -97,10 +99,6 @@ var FLAGSTONE = function(options) {
   // DYNAMIC CONTENT RESET / HARD RESET
   this.hardReset = function() {
     that.flagstones = $(that.flagstonesStr);
-    that.flagstones.each(function() {
-        var self = $(this);
-        self.css('width', that.flagstoneWidth + 'px');
-     });
     that.reset();
   };
 };// end FLAGSTONE
