@@ -14,7 +14,13 @@
 <article>
   <h3>HTML</h3>
   <p>These are the default selectors as attributes, but any selector can be used:</p>
-  &lt;ul flagstone&gt;
+  &lt;ul flagstones&gt;
+    &lt;li flagstone&gt;...&lt;/li&gt;
+    &lt;li flagstone&gt;...&lt;/li&gt;
+    &lt;li flagstone&gt;...&lt;/li&gt;
+    &lt;li flagstone&gt;...&lt;/li&gt;
+    &lt;li flagstone&gt;...&lt;/li&gt;
+  &lt;/ul&gt;
 </article>
 
 <article>
