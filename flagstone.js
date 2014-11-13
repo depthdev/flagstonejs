@@ -13,22 +13,25 @@
  Description:   Responsively tiles HTML elements left to right, top to bottom, and where there's the most room.
 */
  
-var FLAGSTONE = function(obj) {
+var FLAGSTONE = function(options) {
   var that = this;
+  var obj = options || {};
   // AREA (CONTAINER)
-  this.area = obj.area;
+  this.area = obj.area || $('.flagstones');
   this.areaWidth = this.area.outerWidth();
   this.areaHeight = this.area.outerHeight();
   // MIN WIDTH
-  this.minWidth = obj.minWidth;
+  this.minWidth = obj.minWidth || 280;
   // COLUMNS
   this.columns = Math.floor(this.areaWidth / this.minWidth);
   // MARGIN
-  this.margin = obj.margin;
+  this.margin = obj.margin || 10;
   // FLAGSTONES
-  this.flagstones = obj.flagstones;
+  this.flagstones = obj.flagstones || $('.flagstone');
   this.flagstoneHeights = [];
-  this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.margin * (this.columns - 1)) / this.columns);
+  this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.margin * (this.columns + 1)) / this.columns);
+  // ANIMATION DURATION
+  this.duration = obj.duration / 1000 || 1;
   // INITIALIZE THE OBJECT
   this.init = function() {
     this.area.css('position', 'relative');
@@ -39,11 +42,11 @@ var FLAGSTONE = function(obj) {
         'top': '0px',
         'left': '0px',
         'width': that.flagstoneWidth + 'px',
-        '-webkit-transition-duration': '1s',
-        '-moz-transition-duration': '1s',
-        '-ms-transition-duration': '1s',
-        '-o-transition-duration': '1s',
-        'ransition-duration': '1s'
+        '-webkit-transition-duration': that.duration + 's',
+        '-moz-transition-duration': that.duration + 's',
+        '-ms-transition-duration': that.duration + 's',
+        '-o-transition-duration': that.duration + 's',
+        'ransition-duration': that.duration + 's'
       });
       that.flagstoneHeights.push(self.outerHeight());
     });
@@ -58,19 +61,19 @@ var FLAGSTONE = function(obj) {
         var smallestColumn = columnHeights.indexOf(smallestColumnHeight);
         this.flagstones.eq(i).css({
           'top': smallestColumnHeight + this.margin + 'px',
-          'left': (this.flagstoneWidth + this.margin) * smallestColumn + 'px'
+          'left': this.flagstoneWidth * smallestColumn + (this.margin * (smallestColumn + 1)) + 'px'
         });
         columnHeights[smallestColumn] += this.flagstoneHeights[i] + this.margin;
       } else {
         for (var i1 = 0, l1 = this.columns; i1 < l1; i1++) {
           this.flagstones.eq(i1).css({
-            'top': '0px',
-            'left': (this.flagstoneWidth + this.margin) * i1 + 'px'
+            'top': this.margin + 'px',
+            'left': this.flagstoneWidth * i1 + (this.margin * (i1 + 1)) + 'px'
           });
-          columnHeights[i1] = this.flagstoneHeights[i1];
+          columnHeights[i1] = this.flagstoneHeights[i1] + this.margin;
         }
       }
-      this.area.css('height',  Math.max.apply(null, columnHeights) + 'px');
+      this.area.css('height',  Math.max.apply(null, columnHeights) + this.margin + 'px');
     }
   };
   this.run();
@@ -80,7 +83,7 @@ var FLAGSTONE = function(obj) {
   this.reset = function() {
     that.areaWidth = that.area.outerWidth();
     that.columns = Math.floor(that.areaWidth / that.minWidth);
-    that.flagstoneWidth = (that.areaWidth / that.columns) - ((that.margin * (that.columns - 1)) / that.columns);
+    that.flagstoneWidth = (that.areaWidth / that.columns) - ((that.margin * (that.columns + 1)) / that.columns);
     while(that.flagstoneHeights.length > 0) { that.flagstoneHeights.pop(); }
     that.flagstones.each(function() {
       var self = $(this);
@@ -93,6 +96,6 @@ var FLAGSTONE = function(obj) {
     clearTimeout(that.resetDelay1);
     clearTimeout(that.resetDelay2);
     that.resetDelay1 = setTimeout(that.reset,100);
-    that.resetDelay2 = setTimeout(that.reset,1100);
+    that.resetDelay2 = setTimeout(that.reset,that.duration + 1100);
   });
 };// end FLAGSTONE
