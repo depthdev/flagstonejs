@@ -8,4 +8,5 @@
 <ul>
   <li>Name (official): FlagstoneJS</li>
   <li>Names (alternative): Flagstone or flagstone.js</li>
+  <li>Slogan: "Responsive tiling."</li>
 </ul>
