@@ -23,6 +23,4 @@
   </code>
   
   <p><em>If using AngularJS, you can use the "reset" method during your callback; i.e. fs.reset();</em></p>
-// 
-
 </article>
