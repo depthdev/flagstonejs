@@ -21,5 +21,8 @@
       <p>&#160;&#160;margin: 10</p>
     <p>});</p>
   </code>
+  
+  <p><em>If using AngularJS, you can use the "reset" method during your callback; i.e. fs.reset();</em></p>
+// 
 
 </article>
