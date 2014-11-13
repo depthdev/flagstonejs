@@ -14,6 +14,8 @@
 <article>
   <p>Initialize a Flagstone instance and pass in the required properties</p>
   <code>
+   <p>var fs = new FLAGSTONE();</p>
+   <p>OR</p>
     <p>var fs = new FLAGSTONE({</p>
       <p>&#160;&#160;area: $('.js-floor'), <em>// Wrapping element</em></p>
       <p>&#160;&#160;flagstones: $('.js-tile'), <em>// Tilable elements</em></p>
