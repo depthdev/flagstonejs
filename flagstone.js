@@ -11,7 +11,7 @@
  Name(s):       FlagstoneJS (jQuery dependent)
  Slogan:        "Responsive tiling."
  Description:   Responsively tiles HTML elements left to right, top to bottom, and where there's the most room.
- */
+*/
  
 var FLAGSTONE = function(obj) {
   var that = this;
@@ -31,9 +31,20 @@ var FLAGSTONE = function(obj) {
   this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.margin * (this.columns - 1)) / this.columns);
   // INITIALIZE THE OBJECT
   this.init = function() {
+    this.area.css('position', 'relative');
     this.flagstones.each(function() {
       var self = $(this);
-      self.css('width', that.flagstoneWidth + 'px');
+      self.css({
+        'position': 'absolute',
+        'top': '0px',
+        'left': '0px',
+        'width': that.flagstoneWidth + 'px',
+        '-webkit-transition-duration': '1s',
+        '-moz-transition-duration': '1s',
+        '-ms-transition-duration': '1s',
+        '-o-transition-duration': '1s',
+        'ransition-duration': '1s'
+      });
       that.flagstoneHeights.push(self.outerHeight());
     });
   };
