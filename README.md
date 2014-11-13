@@ -13,7 +13,7 @@
 
 <article>
   <h3>HTML</h3>
-  <p>These are the default selectors as attributes, but <em>any</em> selector can be used:</p>
+  <p>This example shows the default selectors as attributes, but <em>any</em> selector can be used on any HTML structure:</p>
   <p>&lt;ul flagstones&gt;</p>
     <p>&#160;&#160;&lt;li flagstone&gt;...[content of all types here]...&lt;/li&gt;</p>
     <p>&#160;&#160;&lt;li flagstone&gt;...[content of all types here]...&lt;/li&gt;</p>
