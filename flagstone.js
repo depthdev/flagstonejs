@@ -76,7 +76,11 @@ var FLAGSTONE = function(options) {
       this.area.css('height',  Math.max.apply(null, columnHeights) + this.margin + 'px');
     }
   };
-  this.run();
+  this.run(); // Initial run
+  // RE-RUN IMMEDIATELY AFTER RESOURCES HAVE LOADED TO GET CORRECT HEIGHTS
+  this.area.find('img,iframe,video,audio').on('load', function() {
+    that.reset();
+  });
   // RESIZE AND RESET
   this.resetDelay1;
   this.resetDelay2; // Makes CSS's animation top align correctly
