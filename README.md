@@ -33,6 +33,7 @@
       <p><strong>&#160;&#160;area: '.js-floor',</strong> <em>// Wrapping element (as a selector string)</em></p>
       <p><strong>&#160;&#160;flagstones: '.js-tile',</strong> <em>// Tilable elements (as a selector string)</em></p>
       <p><strong>&#160;&#160;minWidth: 300,</strong> <em>// Minimum width you want the tilable elements (pixels as int)</em></p>
+      <p><strong>&#160;&#160;maxColumns: 2,</strong> <em> // Maximum number of columns to display
       <p><strong>&#160;&#160;margin: 10,</strong> <em>// Margin between tilable elements (pixels as int)</em></p>
       <p><strong>&#160;&#160;duration: 2000</strong> <em>// Animation duration  (milliseconds as int)</em></p>
     <p><strong>});</p>
