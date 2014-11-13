@@ -14,12 +14,12 @@
 <article>
   <p>Initialize a Flagstone instance and pass in the required properties</p>
   <code>
-  var fs = new FLAGSTONE({
-  area: $('.js-floor'),
-  flagstones: $('.js-tile'),
-  minWidth: 300,
-  margin: 10
-});
-</code>
+    <p>var fs = new FLAGSTONE({</p>
+      <p>area: $('.js-floor'),</p>
+      <p>flagstones: $('.js-tile'),</p>
+      <p>minWidth: 300,</p>
+      <p>margin: 10</p>
+    <p>});</p>
+  </code>
 
 </article>
