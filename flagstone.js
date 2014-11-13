@@ -17,7 +17,8 @@ var FLAGSTONE = function(options) {
   var that = this;
   var obj = options || {};
   // AREA (CONTAINER)
-  this.area = obj.area || $('.flagstones');
+  this.areaStr = obj.area || '[flagstones]';
+  this.area = $(this.areaStr);
   this.areaWidth = this.area.outerWidth();
   this.areaHeight = this.area.outerHeight();
   // MIN WIDTH
@@ -27,27 +28,18 @@ var FLAGSTONE = function(options) {
   // MARGIN
   this.margin = obj.margin || 10;
   // FLAGSTONES
-  this.flagstones = obj.flagstones || $('.flagstone');
+  this.flagstonesStr = obj.flagstones || '[flagstone]';
+  this.flagstones = $(this.flagstonesStr);
   this.flagstoneHeights = [];
   this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.margin * (this.columns + 1)) / this.columns);
   // ANIMATION DURATION
   this.duration = obj.duration / 1000 || 1;
   // INITIALIZE THE OBJECT
   this.init = function() {
-    this.area.css('position', 'relative');
+    $('head').append('<style>'+this.areaStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}'+this.flagstonesStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0px;left:0px;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}</style>');
     this.flagstones.each(function() {
       var self = $(this);
-      self.css({
-        'position': 'absolute',
-        'top': '0px',
-        'left': '0px',
-        'width': that.flagstoneWidth + 'px',
-        '-webkit-transition-duration': that.duration + 's',
-        '-moz-transition-duration': that.duration + 's',
-        '-ms-transition-duration': that.duration + 's',
-        '-o-transition-duration': that.duration + 's',
-        'ransition-duration': that.duration + 's'
-      });
+      self.css('width', that.flagstoneWidth + 'px');
       that.flagstoneHeights.push(self.outerHeight());
     });
   };
@@ -78,7 +70,7 @@ var FLAGSTONE = function(options) {
   };
   this.run(); // Initial run
   // RE-RUN IMMEDIATELY AFTER RESOURCES HAVE LOADED TO GET CORRECT HEIGHTS
-  this.area.find('img,iframe,video,audio').on('load', function() {
+  this.area.find('img,iframe,video,audio,object,embed').on('load', function() {
     that.reset();
   });
   // RESIZE AND RESET
@@ -102,4 +94,13 @@ var FLAGSTONE = function(options) {
     that.resetDelay1 = setTimeout(that.reset,100);
     that.resetDelay2 = setTimeout(that.reset,that.duration + 1100);
   });
+  // DYNAMIC CONTENT RESET / HARD RESET
+  this.hardReset = function() {
+    that.flagstones = $(that.flagstonesStr);
+    that.flagstones.each(function() {
+        var self = $(this);
+        self.css('width', that.flagstoneWidth + 'px');
+     });
+    that.reset();
+  };
 };// end FLAGSTONE
