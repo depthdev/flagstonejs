@@ -1,6 +1,7 @@
-<h1>FlagstoneJS</h1>
+<h1><a href="http://codepen.io/clearwavedesigns/pen/gbOrvR" target="_blank">FlagstoneJS</a></h1>
 <h2>Responsive tiling.</h2>
 <p>Responsively tiles HTML elements left to right, top to bottom, and where there's the most room.</p>
+<p><a href="http://codepen.io/clearwavedesigns/pen/gbOrvR" target="_blank">Live demo</a></p>
 
 <small>COPYRIGHT (C) 2014 by CLEARWAVE DESIGNS, LLC.  All rights reserved.</small>
 
