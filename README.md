@@ -10,3 +10,16 @@
   <li>Names (alternative): Flagstone or flagstone.js</li>
   <li>Slogan: "Responsive tiling."</li>
 </ul>
+
+<article>
+  <p>Initialize a Flagstone instance and pass in the required properties</p>
+  <code>
+  var fs = new FLAGSTONE({
+  area: $('.js-floor'),
+  flagstones: $('.js-tile'),
+  minWidth: 300,
+  margin: 10
+});
+</code>
+
+</article>
