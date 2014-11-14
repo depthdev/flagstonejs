@@ -34,17 +34,29 @@ var FLAGSTONE = function(options) {
   this.flagstones = $(this.flagstonesStr);
   this.flagstoneHeights = [];
   this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.margin * (this.columns + 1)) / this.columns);
-  // ANIMATION DURATION
+  // ANIMATION
+  this.usejQueryAnimation = obj.usejQueryAnimation;
   this.duration = obj.duration / 1000 || 1;
   // RESIZE/RESET DELAY
   this.resizeDelay = obj.resizeDelay || 100;
   // INITIALIZE THE OBJECT
   this.init = function() {
-    $('head').append('<style>'+this.areaStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;min-width:'+(this.minWidth+(this.margin*2))+'px;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}'+this.flagstonesStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0px;left:0px;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}</style>');
+    var head = $('head');
+    // SETUP BOX-SIZING
+    head.append('<style>'+this.areaStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;min-width:'+(this.minWidth+(this.margin*2))+'px;}'+this.flagstonesStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0px;left:0px;}</style>');
+    // SETUP CSS ANIMATION IF ENABLED
+    if (!this.usejQueryAnimation) {
+      head.append('<style>'+this.areaStr+'{-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}'+this.flagstonesStr+'{-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}</style>');
+    };
+    // SETUP WIDTHS
     if (this.areaWidth < this.minWidth + (this.margin * 2)) {this.areaWidth = this.minWidth; }
     this.flagstones.each(function() {
       var self = $(this);
-      self.css('width', that.flagstoneWidth + 'px');
+      if (that.usejQueryAnimation) {
+        self.animate({'width': that.flagstoneWidth + 'px'}, that.duration * 1000);
+      } else {
+        self.css('width', that.flagstoneWidth + 'px');
+      }
       that.flagstoneHeights.push(self.outerHeight());
     });
   };
@@ -56,17 +68,31 @@ var FLAGSTONE = function(options) {
       if (i >= this.columns) {
         var smallestColumnHeight = Math.min.apply(null, columnHeights);
         var smallestColumn = columnHeights.indexOf(smallestColumnHeight);
-        this.flagstones.eq(i).css({
-          'top': smallestColumnHeight + this.margin + 'px',
-          'left': this.flagstoneWidth * smallestColumn + (this.margin * (smallestColumn + 1)) + 'px'
-        });
+        if (this.usejQueryAnimation) {
+          this.flagstones.eq(i).animate({
+            'top': smallestColumnHeight + this.margin + 'px',
+            'left': this.flagstoneWidth * smallestColumn + (this.margin * (smallestColumn + 1)) + 'px'
+          }, this.duration * 1000);
+        } else {
+          this.flagstones.eq(i).css({
+            'top': smallestColumnHeight + this.margin + 'px',
+            'left': this.flagstoneWidth * smallestColumn + (this.margin * (smallestColumn + 1)) + 'px'
+          });
+        }
         columnHeights[smallestColumn] += this.flagstoneHeights[i] + this.margin;
       } else {
         for (var i1 = 0, l1 = this.columns; i1 < l1; i1++) {
-          this.flagstones.eq(i1).css({
-            'top': this.margin + 'px',
-            'left': this.flagstoneWidth * i1 + (this.margin * (i1 + 1)) + 'px'
-          });
+          if (this.usejQueryAnimation) {
+            this.flagstones.eq(i1).animate({
+              'top': this.margin + 'px',
+              'left': this.flagstoneWidth * i1 + (this.margin * (i1 + 1)) + 'px'
+            }, this.duration * 1000);
+          } else {
+            this.flagstones.eq(i1).css({
+              'top': this.margin + 'px',
+              'left': this.flagstoneWidth * i1 + (this.margin * (i1 + 1)) + 'px'
+            });
+          }
           columnHeights[i1] = this.flagstoneHeights[i1] + this.margin;
         }
       }
@@ -80,8 +106,8 @@ var FLAGSTONE = function(options) {
   });
   // RESIZE AND RESET
   this.resetDelay1;
-  this.resetDelay2; // Makes CSS's animation top align correctly
-  this.resetDelay3; // Makes CSS's animation top align correctly
+  this.resetDelay2;
+  this.resetDelay3;
   this.reset = function() {
     that.areaWidth = that.area.outerWidth();
     if (that.areaWidth < that.minWidth + (that.margin * 2)) {that.areaWidth = that.minWidth; }
@@ -91,7 +117,11 @@ var FLAGSTONE = function(options) {
     while(that.flagstoneHeights.length > 0) { that.flagstoneHeights.pop(); }
     that.flagstones.each(function() {
       var self = $(this);
-      self.css('width', that.flagstoneWidth + 'px');
+      if (that.usejQueryAnimation) {
+        self.animate({'width': that.flagstoneWidth + 'px'}, that.duration * 1000);
+      } else {
+        self.css('width', that.flagstoneWidth + 'px');
+      }
       that.flagstoneHeights.push(self.outerHeight());
     });
     that.run();
@@ -101,8 +131,8 @@ var FLAGSTONE = function(options) {
     clearTimeout(that.resetDelay2);
     clearTimeout(that.resetDelay3);
     that.resetDelay1 = setTimeout(that.reset,that.resizeDelay);
-    that.resetDelay2 = setTimeout(that.reset,that.duration + that.resizeDelay + 1000);
-    that.resetDelay2 = setTimeout(that.reset,that.duration + that.resizeDelay + 1000);
+    that.resetDelay2 = setTimeout(that.reset,that.duration + that.resizeDelay + 1000); // Makes CSS & jQuery animation top align correctly
+    that.resetDelay2 = setTimeout(that.reset,that.duration + that.resizeDelay + 2000); // Makes CSS & jQuery animation top align correctly
   });
   // DYNAMIC CONTENT RESET / HARD RESET
   this.hardReset = function() {
