@@ -79,6 +79,7 @@ var FLAGSTONE = function(options) {
   // RESIZE AND RESET
   this.resetDelay1;
   this.resetDelay2; // Makes CSS's animation top align correctly
+  this.resetDelay3; // Makes CSS's animation top align correctly
   this.reset = function() {
     that.areaWidth = that.area.outerWidth();
     if (that.areaWidth < that.minWidth + (that.margin * 2)) {that.areaWidth = that.minWidth; }
@@ -96,8 +97,10 @@ var FLAGSTONE = function(options) {
   $(window).on('resize', function() {
     clearTimeout(that.resetDelay1);
     clearTimeout(that.resetDelay2);
+    clearTimeout(that.resetDelay3);
     that.resetDelay1 = setTimeout(that.reset,100);
     that.resetDelay2 = setTimeout(that.reset,that.duration + 1100);
+    that.resetDelay2 = setTimeout(that.reset,that.duration + 2100);
   });
   // DYNAMIC CONTENT RESET / HARD RESET
   this.hardReset = function() {
