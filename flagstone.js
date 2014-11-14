@@ -8,7 +8,7 @@
  Website:       http://clearwavedesigns.com
  Dependencies:  jquery.js (1.8.3+)
  
- Name(s):       FlagstoneJS, flagstone.js
+ Name(s):       FlagstoneJS (flagstone.js)
  Slogan:        "Responsive tiling."
  Description:   Responsively tiles HTML elements left to right, top to bottom, and where there's the most room.
 */
