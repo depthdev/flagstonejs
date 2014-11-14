@@ -68,7 +68,7 @@ var FLAGSTONE = function(options) {
           columnHeights[i1] = this.flagstoneHeights[i1] + this.margin;
         }
       }
-      this.area.css('height',  Math.max.apply(null, columnHeights) + this.margin + 'px');
+      this.area.css('height', (Math.max.apply(null, columnHeights) || this.flagstoneHeights[0] + this.margin) + this.margin + 'px');
     }
   };
   this.run(); // Initial run
