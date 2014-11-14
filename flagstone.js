@@ -35,7 +35,7 @@ var FLAGSTONE = function(options) {
   this.flagstoneHeights = [];
   this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.margin * (this.columns + 1)) / this.columns);
   // ANIMATION
-  this.usejQueryAnimation = obj.usejQueryAnimation;
+  this.jqueryAnimation = obj.jqueryAnimation;
   this.duration = obj.duration / 1000 || 1;
   // RESIZE/RESET DELAY
   this.resizeDelay = obj.resizeDelay || 100;
@@ -45,14 +45,14 @@ var FLAGSTONE = function(options) {
     // SETUP BOX-SIZING
     head.append('<style>'+this.areaStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;min-width:'+(this.minWidth+(this.margin*2))+'px;}'+this.flagstonesStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0px;left:0px;}</style>');
     // SETUP CSS ANIMATION IF ENABLED
-    if (!this.usejQueryAnimation) {
+    if (!this.jqueryAnimation) {
       head.append('<style>'+this.areaStr+'{-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}'+this.flagstonesStr+'{-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}</style>');
     };
     // SETUP WIDTHS
     if (this.areaWidth < this.minWidth + (this.margin * 2)) {this.areaWidth = this.minWidth; }
     this.flagstones.each(function() {
       var self = $(this);
-      if (that.usejQueryAnimation) {
+      if (that.jqueryAnimation) {
         self.animate({'width': that.flagstoneWidth + 'px'}, that.duration * 1000);
       } else {
         self.css('width', that.flagstoneWidth + 'px');
@@ -68,7 +68,7 @@ var FLAGSTONE = function(options) {
       if (i >= this.columns) {
         var smallestColumnHeight = Math.min.apply(null, columnHeights);
         var smallestColumn = columnHeights.indexOf(smallestColumnHeight);
-        if (this.usejQueryAnimation) {
+        if (this.jqueryAnimation) {
           this.flagstones.eq(i).animate({
             'top': smallestColumnHeight + this.margin + 'px',
             'left': this.flagstoneWidth * smallestColumn + (this.margin * (smallestColumn + 1)) + 'px'
@@ -82,7 +82,7 @@ var FLAGSTONE = function(options) {
         columnHeights[smallestColumn] += this.flagstoneHeights[i] + this.margin;
       } else {
         for (var i1 = 0, l1 = this.columns; i1 < l1; i1++) {
-          if (this.usejQueryAnimation) {
+          if (this.jqueryAnimation) {
             this.flagstones.eq(i1).animate({
               'top': this.margin + 'px',
               'left': this.flagstoneWidth * i1 + (this.margin * (i1 + 1)) + 'px'
@@ -117,7 +117,7 @@ var FLAGSTONE = function(options) {
     while(that.flagstoneHeights.length > 0) { that.flagstoneHeights.pop(); }
     that.flagstones.each(function() {
       var self = $(this);
-      if (that.usejQueryAnimation) {
+      if (that.jqueryAnimation) {
         self.animate({'width': that.flagstoneWidth + 'px'}, that.duration * 1000);
       } else {
         self.css('width', that.flagstoneWidth + 'px');
