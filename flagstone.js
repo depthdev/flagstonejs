@@ -36,6 +36,8 @@ var FLAGSTONE = function(options) {
   this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.margin * (this.columns + 1)) / this.columns);
   // ANIMATION DURATION
   this.duration = obj.duration / 1000 || 1;
+  // RESIZE/RESET DELAY
+  this.resizeDelay = obj.resizeDelay || 100;
   // INITIALIZE THE OBJECT
   this.init = function() {
     $('head').append('<style>'+this.areaStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;min-width:'+(this.minWidth+(this.margin*2))+'px;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}'+this.flagstonesStr+'{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0px;left:0px;-webkit-transition-duration:'+that.duration+'s;-moz-transition-duration:'+that.duration+'s;-ms-transition-duration:'+that.duration+'s;-o-transition-duration:'+that.duration+'s;transition-duration:'+that.duration+'s;}</style>');
@@ -98,9 +100,9 @@ var FLAGSTONE = function(options) {
     clearTimeout(that.resetDelay1);
     clearTimeout(that.resetDelay2);
     clearTimeout(that.resetDelay3);
-    that.resetDelay1 = setTimeout(that.reset,100);
-    that.resetDelay2 = setTimeout(that.reset,that.duration + 1100);
-    that.resetDelay2 = setTimeout(that.reset,that.duration + 2100);
+    that.resetDelay1 = setTimeout(that.reset,that.resizeDelay);
+    that.resetDelay2 = setTimeout(that.reset,that.duration + that.resizeDelay + 1000);
+    that.resetDelay2 = setTimeout(that.reset,that.duration + that.resizeDelay + 1000);
   });
   // DYNAMIC CONTENT RESET / HARD RESET
   this.hardReset = function() {
