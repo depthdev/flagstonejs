@@ -35,7 +35,7 @@
       <p><strong>&#160;&#160;minWidth: 300,</strong> <em>// Minimum width you want the tilable elements (pixels as int)</em></p>
       <p><strong>&#160;&#160;maxColumns: 2,</strong> <em> // Maximum number of columns to display (as an int)
       <p><strong>&#160;&#160;margin: 10,</strong> <em>// Margin between tilable elements (pixels as an int)</em></p>
-      <p><strong>&#160;&#160;jqueryAnimation: false,</strong> <em>// Animation duration  (milliseconds as an int)</em></p>
+      <p><strong>&#160;&#160;jqueryAnimation: false,</strong> <em>// If true, jQuery animations (VERY SLOW!) will be used instead of CSS transition animations (as a boolean)</em></p>
       <p><strong>&#160;&#160;duration: 2000,</strong> <em>// Animation duration  (milliseconds as an int)</em></p>
       <p><strong>&#160;&#160;resizeDelay: 250</strong> <em>// Delay running the reset function while resizing the window  (milliseconds as an int)</em></p>
     <p><strong>});</p>
