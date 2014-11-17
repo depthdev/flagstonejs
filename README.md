@@ -44,8 +44,8 @@
 
 <article>
   <h3>Reset Options (for dynamic content and/or media content)</h3>
-  <p><em>Soft reset: <strong>fs.reset();</strong></em> // Simple and quick reset, ideal for when a flagstone grows after the initial load.</p>
-  <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamically added/removed flagstones, all elements need to be re-referenced and re-calculated.</p>
+  <p><em>Soft reset: <strong>fs.reset();</strong></em> // Simple and quick reset. This is ideal for when one or more flagstone's content grows after the initial run.</p>
+  <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamically added/removed flagstones. This requires all elements to be re-referenced and re-calculated.</p>
   
   <p>NOTE: The jQuery "load" event is used to delay the initial calculations if there are images, iframes, objects, embeds, videos or audio. If ng-src is used via AngularJS, you will need to provide a load directive and call the soft reset on the callback.</p>
 </article>
