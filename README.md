@@ -40,8 +40,11 @@
       <p><strong>&#160;&#160;resizeDelay: 250</strong> <em>// Delay running the reset function while resizing the window  (milliseconds as an int)</em></p>
     <p><strong>});</p>
   </code>
-  
-  <p><em>Soft reset: <strong>fs.reset();</strong></em></p> // Simple and quick reset, ideal for when a flagstone grows after the initial load.
+</article>
+
+<article>
+  <h3>Reset Options (for dynamic content and/or media content)</h3>
+  <p><em>Soft reset: <strong>fs.reset();</strong></em> // Simple and quick reset, ideal for when a flagstone grows after the initial load.</p>
   <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamically added/removed flagstones, all elements need to be re-referenced and re-calculated.</p>
   
   <p>NOTE: The jQuery "load" event is used to delay the initial calculations if there are images, iframes, objects, embeds, videos or audio. If ng-src is used via AngularJS, you will need to provide a load directive and call the soft reset on the callback.</p>
