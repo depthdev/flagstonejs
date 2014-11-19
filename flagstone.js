@@ -132,7 +132,7 @@ var FLAGSTONE = function(options) {
     clearTimeout(that.resetDelay3);
     that.resetDelay1 = setTimeout(that.reset,that.resizeDelay);
     that.resetDelay2 = setTimeout(that.reset,that.duration + that.resizeDelay + 1000); // Makes CSS & jQuery animation top align correctly
-    that.resetDelay2 = setTimeout(that.reset,that.duration + that.resizeDelay + 2000); // Makes CSS & jQuery animation top align correctly
+    that.resetDelay3 = setTimeout(that.reset,that.duration + that.resizeDelay + 2000); // Makes CSS & jQuery animation top align correctly
   });
   // DYNAMIC CONTENT RESET / HARD RESET
   this.hardReset = function() {
