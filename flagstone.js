@@ -38,7 +38,7 @@ var FLAGSTONE = function(options) {
   this.duration = obj.duration === 0 ? 0 : obj.duration / 1000 || 1;
   this.jqueryAnimation = obj.jqueryAnimation;
   // RESIZE/RESET DELAY
-  this.resizeDelay = obj.resizeDelay || 100;
+  this.resizeDelay = obj.resizeDelay || 250;
   // INITIALIZE THE OBJECT
   this.init = function() {
     var head = $('head');
