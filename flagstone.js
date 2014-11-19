@@ -35,8 +35,8 @@ var FLAGSTONE = function(options) {
   this.flagstoneHeights = [];
   this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.margin * (this.columns + 1)) / this.columns);
   // ANIMATION
+  this.duration = obj.duration === 0 ? 0 : obj.duration / 1000 || 1;
   this.jqueryAnimation = obj.jqueryAnimation;
-  this.duration = obj.duration / 1000 || 1;
   // RESIZE/RESET DELAY
   this.resizeDelay = obj.resizeDelay || 100;
   // INITIALIZE THE OBJECT
