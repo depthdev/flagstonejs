@@ -30,7 +30,7 @@
   <code>
    <p><strong>var fs = new FLAGSTONE();</strong></p>
    <p>OR</p>
-    <p><strong>var fs = new FLAGSTONE({</p>
+    <p><strong>var fs = new FLAGSTONE({</strong></p>
       <p><strong>&#160;&#160;area: '.js-floor',</strong> <em>// Wrapping element (as a selector string)</em></p>
       <p><strong>&#160;&#160;areaMargin: 10,</strong> <em>// The padding around the area edge in pixels (as an int)</em></p>
       <p><strong>&#160;&#160;flagstones: '.js-tile',</strong> <em>// Tilable elements (as a selector string)</em></p>
@@ -42,7 +42,7 @@
       <p><strong>&#160;&#160;duration: 2000,</strong> <em>// Animation duration, or 0 for none (milliseconds as an int)</em></p>
       <p><strong>&#160;&#160;jqueryAnimation: false,</strong> <em>// If true, jQuery animation will be used instead of CSS animation; but it's very slow! (as a boolean)</em></p>
       <p><strong>&#160;&#160;resizeDelay: 250</strong> <em>// Delay running the reset function while resizing the window  (milliseconds as an int)</em></p>
-    <p><strong>});</p>
+    <p><strong>});</strong></p>
   </code>
 </article>
 
