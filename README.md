@@ -2,8 +2,8 @@
 <h2>"Responsive Tiling"</h2>
 <h3>Current Version: 1.3.20150723</h3>
 <p>Responsively tiles HTML elements left to right, top to bottom, and where there's the most room.</p>
-<p><a href="http://codepen.io/clearwavedesigns/pen/QbVLgQ" target="_blank">Live demo</a> (no dependencies, CSS only animation)</p>
-<p><a href="http://codepen.io/clearwavedesigns/pen/gbOrvR" target="_blank">Live demo</a> (jQuery dependent with optional jQuery animation instead of CSS)</p>
+<p><a href="http://codepen.io/clearwavedesigns/pen/QbVLgQ" target="_blank">Live demo</a> (No dependencies with CSS-only animation)</p>
+<p><a href="http://codepen.io/clearwavedesigns/pen/gbOrvR" target="_blank">Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
 
 <small>COPYRIGHT (C) 2014-2015 by CLEARWAVE DESIGNS, LLC.  All rights reserved.</small>
 
