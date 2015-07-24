@@ -25,7 +25,7 @@
     <p>&#160;&#160;&lt;li flagstone&gt;...[content of all types here]...&lt;/li&gt;</p>
   <p>&lt;/ul&gt;</p>
 </article>
-
+<br/>
 <article>
   <h3>JavaScript</h3>
   <p>Initialize a Flagstone instance and pass in the <em>optional</em> properties</p>
@@ -47,12 +47,12 @@
     <p><strong>});</strong></p>
   </code>
 </article>
-
+<br/>
 <article>
   <h3>Reset Options (for dynamic content and/or media content)</h3>
   <p><em>Soft reset: <strong>fs.reset();</strong></em> // Simple and quick reset. This is ideal for when one or more flagstone's content grows after the initial run.</p>
   <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamically added/removed flagstones. This requires all elements to be re-referenced and re-calculated.</p>
-  
+  <br/>
   <p>NOTE: If ng-src is used via AngularJS, you will need to provide a load directive and call the <em>soft reset</em> on the callback.</p>
   <p>NOTE: If elements are injected onto the page after the plugin has been initialized, you will need to call the <em>hard reset</em>.</p>
 </article>
