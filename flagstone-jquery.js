@@ -9,7 +9,7 @@
  Dependencies:  jquery.js (1.8.3+)
  
  Name(s):       FlagstoneJS (flagstone.js)
- Version:       1.2.20150720
+ Version:       1.3.20150723
  Slogan:        "Responsive tiling."
  Description:   Responsively tiles HTML elements left to right, top to bottom, and where there's the most room.
  */
@@ -137,7 +137,16 @@ var FLAGSTONE = function(settings) {
       that.reset();
     }, 0);
   };
-  // INITIALIZE THE oECT
+  // RESETS (ADDRESSES ISSUES WITH POSITIONING WHEN CSS ANIMATIONS ARE USED, THAT'S WHY THERE ARE 3 RESETS)
+  this.resets = function() {
+      clearTimeout(that.resetDelay1);
+      clearTimeout(that.resetDelay2);
+      clearTimeout(that.resetDelay3);
+      that.resetDelay1 = setTimeout(that.reset.bind(that), that.resizeDelay);
+      that.resetDelay2 = setTimeout(that.reset.bind(that), (that.duration * 1000) + that.resizeDelay);
+      that.resetDelay3 = setTimeout(that.reset.bind(that), (that.duration * 2000) + that.resizeDelay);
+  };
+  // INITIALIZE
   this.init = function() {
     this.hide();
     var head = $('head');
@@ -147,24 +156,12 @@ var FLAGSTONE = function(settings) {
     if (!this.jqueryAnimation) {
       head.append('<style>' + this.areaStr + '{-webkit-transition-duration:' + that.duration + 's;-moz-transition-duration:' + that.duration + 's;-ms-transition-duration:' + that.duration + 's;-o-transition-duration:' + that.duration + 's;transition-duration:' + that.duration + 's;}' + this.flagstonesStr + '{-webkit-transition-duration:' + that.duration + 's;-moz-transition-duration:' + that.duration + 's;-ms-transition-duration:' + that.duration + 's;-o-transition-duration:' + that.duration + 's;transition-duration:' + that.duration + 's;}</style>');
     };
-    // Resize listener
-    $(window).on('resize', function() {
-      // if (!that.duration) {}
-      clearTimeout(that.resetDelay1);
-      clearTimeout(that.resetDelay2);
-      clearTimeout(that.resetDelay3);
-      that.resetDelay1 = setTimeout(that.reset.bind(that), that.resizeDelay);
-      that.resetDelay2 = setTimeout(that.reset.bind(that), that.duration + that.resizeDelay + 1000); // Makes CSS & jQuery animation top align correctly
-      that.resetDelay3 = setTimeout(that.reset.bind(that), that.duration + that.resizeDelay + 2000); // Makes CSS & jQuery animation top align correctly
-    });
     // Run reset to calculate and run flagstone!
-    setTimeout(this.reset.bind(this), 0);
+    setTimeout(that.reset, 0);
     // Reset immediately after resources have loaded to get correct heights
-    setTimeout(function() {
-      that.area.find('img,iframe,video,audio,oect,embed').on('load', function() {
-        that.reset();
-      });
-    }, 0);
+    setTimeout(window.addEventListener('load', that.resets), 0);
+    // Resize listener
+    window.addEventListener('resize', that.resets);
   };
   this.init();
 }; // end FLAGSTONEJS
