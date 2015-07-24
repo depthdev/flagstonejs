@@ -49,7 +49,7 @@
 </article>
 <br/>
 <article>
-  <h3>Reset Options (for dynamic content and/or media content)</h3>
+  <h3>Reset Options (for dynamic content)</h3>
   <p><em>Soft reset: <strong>fs.reset();</strong></em> // Simple and quick reset. This is ideal for when one or more flagstone's content grows after the initial run.</p>
   <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamically added/removed flagstones. This requires all elements to be re-referenced and re-calculated.</p>
   <br/>
