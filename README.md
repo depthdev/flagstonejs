@@ -2,9 +2,10 @@
 <h2>"Responsive Tiling"</h2>
 <p>Current Version: <strong>1.3.20150723</strong></p>
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size.</h3>
+<br/>
 <p><a href="http://codepen.io/clearwavedesigns/pen/QbVLgQ" target="_blank">Live demo</a> (No dependencies with CSS-only animation)</p>
 <p><a href="http://codepen.io/clearwavedesigns/pen/gbOrvR" target="_blank">Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
-
+<br/>
 <small>COPYRIGHT (C) 2014-2015 by CLEARWAVE DESIGNS, LLC.  All rights reserved.</small>
 
 <ul>
@@ -12,7 +13,7 @@
   <li>Names (alternative): Flagstone or flagstone.js</li>
   <li>Slogan: "Responsive tiling."</li>
 </ul>
-
+<br/>
 <article>
   <h3>HTML</h3>
   <p>This example shows the default selectors as attributes, but <em>any</em> selector can be used on any HTML structure:</p>
