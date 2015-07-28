@@ -11,11 +11,6 @@ Copyright 2014-2015 CLEARWAVE DESIGNS, LLC
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
-
-Copyright 2014 by CLEARWAVE DESIGNS, LLC.
- 
-Licensed under the Apache License, Version 2.0
-http://www.apache.org/licenses/LICENSE-2.0
  
 Author:        Adam Carson
 Website:       http://clearwavedesigns.com
@@ -23,7 +18,7 @@ Dependencies:  jquery.js (1.8.3+)
  
 Name(s):       FlagstoneJS (flagstone.js)
 Slogan:        "Responsive tiling."
-Description:   Responsively tiles HTML elements left to right, top to bottom, and where there's the most room.
+Description:   Responsively tiles HTML elements left or right, top to bottom, and where there's the most room.
 
 
 
