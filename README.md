@@ -53,19 +53,13 @@
       <p><strong>&#160;&#160;duration: 2000,</strong> <em>// Animation duration, or 0 for none (milliseconds as an int)</em></p>
       <p><strong>&#160;&#160;jqueryAnimation: false,</strong> <em>// NOTE: Only available on version 1.3 with jQuery support. If true, jQuery animation will be used instead of CSS animation; but it's very slow! (as a boolean)</em></p>
       <p><strong>&#160;&#160;resizeDelay: 250,</strong> <em>// Delay running the reset function while resizing the window  (milliseconds as an int)</em></p>
-      <p><strong>&#160;&#160;custom: function(index, elem) {
-        <br/>
-        &#160;&#160;if (index === 3) {
-        <br/>
-        &#160;&#160;&#160;&#160;elem.className = 'highlight';
-        <br/>
-        &#160;&#160;} else {
-        <br/>
-        &#160;&#160;&#160;&#160;elem.className = '';
-        <br/>
-        &#160;&#160;}
-        <br/>
-      }</strong> <em>// Callback function for each element with index and element arguments</em></p>
+      <p><strong>&#160;&#160;custom: function(index, elem) {</strong></p>
+      <p>&#160;&#160;if (index === 3) {</p>
+      <p>&#160;&#160;&#160;&#160;elem.className = 'highlight';</p>
+      <p>&#160;&#160;} else {</p>
+      <p>&#160;&#160;&#160;&#160;elem.className = '';</p>
+      <p>&#160;&#160;}</p>
+      <p>}</strong> <em>// Callback function for each element with index and element arguments</em></p>
     <p><strong>});</strong></p>
   </code>
 </article>
@@ -74,6 +68,7 @@
   <h3>Reset Options (for dynamic content)</h3>
   <p><em>Soft reset: <strong>fs.reset();</strong></em> // Simple and quick reset. This is ideal for when one or more flagstone's content grows after the initial run.</p>
   <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamically added/removed flagstones. This requires all elements to be re-referenced and re-calculated.</p>
+  <p><em>Hide: <strong>fs.hide();</strong></em> // Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM</p>
   <br/>
   <p>NOTE: If ng-src is used via AngularJS, you will need to provide a load directive and call the <em>soft reset</em> on the callback.</p>
   <p>NOTE: If elements are injected onto the page after the plugin has been initialized, you will need to call the <em>hard reset</em>.</p>
