@@ -1,26 +1,26 @@
 /*
-Copyright 2014-2015 CLEARWAVE DESIGNS, LLC
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
- 
-Author:        Adam Carson
-Website:       http://clearwavedesigns.com
-Dependencies:  None.
- 
-Name(s):       FlagstoneJS (flagstone.js)
-Version:       2.0.20150731
-Slogan:        "Responsive tiling."
-Description:   Responsively tiles HTML elements left or right, top to bottom, and where there's the most room.
+   Copyright 2014-2015 CLEARWAVE DESIGNS, LLC
+   
+      Licensed under the Apache License, Version 2.0 (the "License");
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+   
+          http://www.apache.org/licenses/LICENSE-2.0
+   
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+    
+   Author:        Adam Carson
+   Website:       http://clearwavedesigns.com
+   Dependencies:  None.
+    
+   Name(s):       FlagstoneJS (flagstone.js)
+   Version:       2.0.20150731
+   Slogan:        "Responsive tiling."
+   Description:   Responsively tiles HTML elements left or right, top to bottom, and where there's the most room.
  */
  
  function FLAGSTONE(settings) {
@@ -90,10 +90,10 @@ Description:   Responsively tiles HTML elements left or right, top to bottom, an
           this.flagstones[i].style = '';
           this.flagstones[i].style.cssText = 'width:' + width + 'px;' + (this.square ? 'height:' + width + 'px;': '') + 'top:' + this.areaMargin + 'px;' + this.direction + ':' + (this.flagstoneWidth * i + (i ? this.flagstonesMargin * i + this.areaMargin : this.areaMargin)) + 'px;';
           columnHeights[i] = this.flagstoneHeights[i] + this.areaMargin;
+          this.custom(i, this.flagstones[i]);
         } else {
           columnHeights[i] = this.flagstoneHeightsAvg + this.areaMargin;
         }
-        this.custom(i, this.flagstones[i]);
       } else {
         // Every other "row"
         var smallestColumnHeight = Math.min.apply(null, columnHeights);
@@ -103,10 +103,10 @@ Description:   Responsively tiles HTML elements left or right, top to bottom, an
           this.flagstones[i].style = '';
           this.flagstones[i].style.cssText = 'width:' + width + 'px;' + (this.square ? 'height:' + width + 'px;': '') + 'top:' + (smallestColumnHeight + this.flagstonesMargin) + 'px;' + this.direction + ':' + (this.flagstoneWidth * smallestColumn + (smallestColumn ? this.flagstonesMargin * smallestColumn + this.areaMargin : this.areaMargin)) + 'px;';
           columnHeights[smallestColumn] += this.flagstoneHeights[i] + this.flagstonesMargin;
+          this.custom(i, this.flagstones[i]);
         } else {
           columnHeights[smallestColumn] += this.flagstoneHeightsAvg + this.flagstonesMargin;
         }
-        this.custom(i, this.flagstones[i]);
       }
       this.area.style.height = (Math.max.apply(null, columnHeights) || this.flagstoneHeights[0] + this.areaMargin) + this.areaMargin + 'px';
     }
@@ -181,4 +181,3 @@ Description:   Responsively tiles HTML elements left or right, top to bottom, an
   };
   this.init();
 }; // end FLAGSTONEJS
- 
