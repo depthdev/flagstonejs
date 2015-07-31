@@ -7,7 +7,7 @@
 
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size; and, comes with many additional features and options.</h3>
 <br/>
-<p><a href="http://codepen.io/clearwavedesigns/full/VLqZMg" target="_blank">2.0 Live demo</a> (No dependencies with CSS-only animation)</p>
+<p><a href="http://codepen.io/clearwavedesigns/full/VLqZMg" target="_blank">2.0 Live demo</a> (Reloaded with many more options. No dependencies. CSS-only animation)</p>
 <img src="http://cdn.clearwavedesigns.com/flagstonejs-2.0.jpg" alt="FlagstoneJS 2.0"/>
 <br/>
 <br/>
