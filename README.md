@@ -1,6 +1,8 @@
 <h1>FlagstoneJS</h1>
 <h2>"Responsive Tiling"</h2>
 <br/>
+<img src="http://cdn.clearwavedesigns.com/flagstonejs-2.0.jpg" alt="FlagstoneJS 2.0"/>
+<br/>
 <p><strong>Current Version:</strong> 2.0.20150731 (version 1.3 reloaded with many more options)</p>
 <p><strong>Current Version:</strong> 1.3.20150731</p>
 
