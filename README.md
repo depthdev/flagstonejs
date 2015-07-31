@@ -54,12 +54,12 @@
       <p><strong>&#160;&#160;jqueryAnimation: false,</strong> <em>// NOTE: Only available on version 1.3 with jQuery support. If true, jQuery animation will be used instead of CSS animation; but it's very slow! (as a boolean)</em></p>
       <p><strong>&#160;&#160;resizeDelay: 250,</strong> <em>// Delay running the reset function while resizing the window  (milliseconds as an int)</em></p>
       <p><strong>&#160;&#160;custom: function(index, elem) {</strong></p>
-      <p>&#160;&#160;if (index === 3) {</p>
-      <p>&#160;&#160;&#160;&#160;elem.className = 'highlight';</p>
-      <p>&#160;&#160;} else {</p>
-      <p>&#160;&#160;&#160;&#160;elem.className = '';</p>
-      <p>&#160;&#160;}</p>
-      <p>}</strong> <em>// Callback function for each element with index and element arguments</em></p>
+      <p>&#160;&#160;&#160;&#160;if (index === 3) {</p>
+      <p>&#160;&#160;&#160;&#160;&#160;&#160;elem.className = 'highlight';</p>
+      <p>&#160;&#160;&#160;&#160;} else {</p>
+      <p>&#160;&#160;&#160;&#160;&#160;&#160;elem.className = '';</p>
+      <p>&#160;&#160;&#160;&#160;}</p>
+      <p>&#160;&#160;<strong>}</strong> <em>// Callback function for each element with index and element arguments</em></p>
     <p><strong>});</strong></p>
   </code>
 </article>
