@@ -18,12 +18,12 @@ Website:       http://clearwavedesigns.com
 Dependencies:  None.
  
 Name(s):       FlagstoneJS (flagstone.js)
-Version:       1.3.20150723
+Version:       1.3.20150731
 Slogan:        "Responsive tiling."
 Description:   Responsively tiles HTML elements left or right, top to bottom, and where there's the most room.
  */
 
-var FLAGSTONE = function(settings) {
+function FLAGSTONE(settings) {
 
   var _ = function(s) { var a = [], nl = document.querySelectorAll(s); for (var i = 0, l = nl.length; i < l; i++) { a[i] = nl[i]; } return a.length > 1 ? a : a[0]; };
 
@@ -66,17 +66,15 @@ var FLAGSTONE = function(settings) {
     for (var i = 0, l = this.flagstoneHeights.length; i < l; i++) {
       if (i < this.columns) {
         // First "row"
-        for (var ii = 0, ll = this.columns; ii < ll; ii++) {
-          var width = 'width: ' + this.flagstones[ii].style.cssText.replace(/.*width\:\s?(\d+).+/, '$1') + 'px;';
-          this.flagstones[ii].style = '';
-          this.flagstones[ii].style.cssText = width + 'top: ' + this.areaMargin + 'px;' + this.direction + ':' + (this.flagstoneWidth * ii + (ii ? this.flagstonesMargin * ii + this.areaMargin : this.areaMargin)) + 'px;';
-          columnHeights[ii] = this.flagstoneHeights[ii] + this.areaMargin;
-        }
+        var width = 'width: ' + this.flagstones[i].style.cssText.replace(/.*width\:\s?(\d+).+/, '$1') + 'px;';
+        this.flagstones[i].style = '';
+        this.flagstones[i].style.cssText = width + 'top: ' + this.areaMargin + 'px;' + this.direction + ':' + (this.flagstoneWidth * i + (i ? this.flagstonesMargin * i + this.areaMargin : this.areaMargin)) + 'px;';
+        columnHeights[i] = this.flagstoneHeights[i] + this.areaMargin;
       } else {
         // Every other "row"
         var smallestColumnHeight = Math.min.apply(null, columnHeights);
         var smallestColumn = columnHeights.indexOf(smallestColumnHeight);
-        var width = 'width: ' + this.flagstones[ii].style.cssText.replace(/.*width\:\s?(\d+).+/, '$1') + 'px;';
+        var width = 'width: ' + this.flagstones[i].style.cssText.replace(/.*width\:\s?(\d+).+/, '$1') + 'px;';
         this.flagstones[i].style = '';
         this.flagstones[i].style.cssText = width + 'top: ' + (smallestColumnHeight + this.flagstonesMargin) + 'px;' + this.direction + ':' + (this.flagstoneWidth * smallestColumn + (smallestColumn ? this.flagstonesMargin * smallestColumn + this.areaMargin : this.areaMargin)) + 'px;';
         columnHeights[smallestColumn] += this.flagstoneHeights[i] + this.flagstonesMargin;
