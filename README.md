@@ -3,13 +3,13 @@
 <br/>
 <p><strong>Current Version:</strong> 2.0.20150731 (version 1.3 reloaded with many more options)</p>
 <p><strong>Current Version:</strong> 1.3.20150731</p>
-<br/>
+
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size; and, comes with many additional features and options.</h3>
 <br/>
-<p><a href="http://codepen.io/clearwavedesigns/full/VLqZMg" target="_blank">v2.0 Live demo</a> (No dependencies with CSS-only animation)</p>
-<br/>
-<p><a href="http://codepen.io/clearwavedesigns/full/QbVLgQ" target="_blank">v1.3 Live demo</a> (No dependencies with CSS-only animation)</p>
-<p><a href="http://codepen.io/clearwavedesigns/full/gbOrvR" target="_blank">v1.3-jquery Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
+<p><a href="http://codepen.io/clearwavedesigns/full/VLqZMg" target="_blank">2.0 Live demo</a> (No dependencies with CSS-only animation)</p>
+<hr/>
+<p><a href="http://codepen.io/clearwavedesigns/full/QbVLgQ" target="_blank">1.3 Live demo</a> (No dependencies with CSS-only animation)</p>
+<p><a href="http://codepen.io/clearwavedesigns/full/gbOrvR" target="_blank">1.3-jquery Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
 <br/>
 <small>COPYRIGHT (C) 2014-2015 by CLEARWAVE DESIGNS, LLC.  All rights reserved.</small>
 
@@ -42,13 +42,24 @@
       <p><strong>&#160;&#160;areaMargin: 10,</strong> <em>// The padding around the area edge in pixels (as an int)</em></p>
       <p><strong>&#160;&#160;flagstones: '.js-tile',</strong> <em>// Tilable elements (as a selector string)</em></p>
       <p><strong>&#160;&#160;flagstonesMargin: 10,</strong> <em>// Margin between flagstones in pixels (as an int)</em></p>
-      <p><strong>&#160;&#160;minWidth: 300,</strong> <em>// Minimum width you want the tilable elements (pixels as int)</em></p>
-      <p><strong>&#160;&#160;maxColumns: 2,</strong> <em> // Maximum number of columns to display (as an int)
       <p><strong>&#160;&#160;margin: 10,</strong> <em>// This overrides areaMargin & flagstoneMargin and is equivalent to setting them both to this value</em></p>
+      <p><strong>&#160;&#160;minWidth: 300,</strong> <em>// Minimum width you want the tilable elements (pixels as int)</em></p>
+      <p><strong>&#160;&#160;maxColumns: 5,</strong> <em> // Maximum number of columns to display (as an int)
       <p><strong>&#160;&#160;direction: 'left',</strong> <em>// Alternative is "right"; the default is "left"; and for top to bottom, use CSS's built in Columns or Flexbox</em></p>
+      <p><strong>&#160;&#160;random: false,</strong> <em>// Display flagstones in a random order; the default is false (as a boolean)</em></p>
+      <p><strong>&#160;&#160;square: false,</strong> <em>// Makes each flagstone square; default is false</em></p>
+      <p><strong>&#160;&#160;space: false,</strong> <em>// Spaces out flagstones randomly (as a boolean)</em></p>
+      <p><strong>&#160;&#160;spaceFrequency: 0.4,</strong> <em>// Adjusts the frequency of the amount of spaces (as a float 0.0 - 1.0); default is 0.4</em></p>
       <p><strong>&#160;&#160;duration: 2000,</strong> <em>// Animation duration, or 0 for none (milliseconds as an int)</em></p>
-      <p><strong>&#160;&#160;jqueryAnimation: false,</strong> <em>// If true, jQuery animation will be used instead of CSS animation; but it's very slow! (as a boolean)</em></p>
-      <p><strong>&#160;&#160;resizeDelay: 250</strong> <em>// Delay running the reset function while resizing the window  (milliseconds as an int)</em></p>
+      <p><strong>&#160;&#160;jqueryAnimation: false,</strong> <em>// NOTE: Only available on version 1.3 with jQuery support. If true, jQuery animation will be used instead of CSS animation; but it's very slow! (as a boolean)</em></p>
+      <p><strong>&#160;&#160;resizeDelay: 250,</strong> <em>// Delay running the reset function while resizing the window  (milliseconds as an int)</em></p>
+      <p><strong>&#160;&#160;custom: function(index, elem) {
+          if (index === 3) {
+            elem.className = 'highlight';
+          } else {
+            elem.className = '';
+          }
+        }</strong> <em>// Callback function for each element with index and element arguments</em></p>
     <p><strong>});</strong></p>
   </code>
 </article>
