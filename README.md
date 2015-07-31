@@ -1,6 +1,9 @@
 <h1>FlagstoneJS</h1>
 <h2>"Responsive Tiling"</h2>
-<p>Current Version: <strong>1.3.20150723</strong></p>
+
+<p><strong>Current Version:</strong> 2.0.20150731</p>
+<p><strong>Current Version:</strong> 1.3.20150731</p>
+
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size.</h3>
 <br/>
 <p><a href="http://codepen.io/clearwavedesigns/full/QbVLgQ" target="_blank">Live demo</a> (No dependencies with CSS-only animation)</p>
