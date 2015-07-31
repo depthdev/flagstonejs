@@ -1,4 +1,5 @@
 <h1>FlagstoneJS</h1>
+<img src="http://clearwavedesigns.com/assets/images/breathe-up.jpg" alt=""/>
 <h2>"Responsive Tiling"</h2>
 <br/>
 <p><strong>Current Version:</strong> 2.0.20150731 (version 1.3 reloaded with many more options)</p>
