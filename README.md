@@ -66,9 +66,10 @@
 <br/>
 <article>
   <h3>Reset Options (for dynamic content)</h3>
-  <p><em>Soft reset: <strong>fs.reset();</strong></em> // Simple and quick reset. This is ideal for when one or more flagstone's content grows after the initial run.</p>
-  <p><em>Hard reset: <strong>fs.hardReset();</strong></em> // For dynamically added/removed flagstones. This requires all elements to be re-referenced and re-calculated.</p>
-  <p><em>Hide: <strong>fs.hide();</strong></em> // Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM</p>
+  <br/>
+  <p>Soft reset: <strong>fs.reset();</strong> <em>// Simple and quick reset. This is ideal for when one or more flagstone's content grows after the initial run.</em></p>
+  <p>Hard reset: <strong>fs.hardReset();</strong> <em>// For dynamically added/removed flagstones. This requires all elements to be re-referenced and re-calculated.</em></p>
+  <p>Hide: <strong>fs.hide();</strong> <em>// Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM.</em></p>
   <br/>
   <p>NOTE: If ng-src is used via AngularJS, you will need to provide a load directive and call the <em>soft reset</em> on the callback.</p>
   <p>NOTE: If elements are injected onto the page after the plugin has been initialized, you will need to call the <em>hard reset</em>.</p>
