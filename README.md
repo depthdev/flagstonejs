@@ -9,8 +9,8 @@
 <p><a href="http://codepen.io/clearwavedesigns/full/VLqZMg" target="_blank">2.0 Live demo</a> (No dependencies with CSS-only animation)</p>
 <img src="http://cdn.clearwavedesigns.com/flagstonejs-2.0.jpg" alt="FlagstoneJS 2.0"/>
 <br/>
-<hr/>
 <br/>
+<hr/>
 <br/>
 <p><a href="http://codepen.io/clearwavedesigns/full/QbVLgQ" target="_blank">1.3 Live demo</a> (No dependencies with CSS-only animation)</p>
 <p><a href="http://codepen.io/clearwavedesigns/full/gbOrvR" target="_blank">1.3-jquery Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
