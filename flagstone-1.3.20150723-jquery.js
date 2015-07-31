@@ -18,12 +18,12 @@ Website:       http://clearwavedesigns.com
 Dependencies:  jquery.js (1.8.3+)
  
 Name(s):       FlagstoneJS (flagstone.js)
-Version:       1.3.20150723
+Version:       1.3.20150731
 Slogan:        "Responsive tiling."
 Description:   Responsively tiles HTML elements left or right, top to bottom, and where there's the most room.
  */
 
-var FLAGSTONE = function(settings) {
+function FLAGSTONE(settings) {
 
   var that = this;
 
@@ -67,22 +67,20 @@ var FLAGSTONE = function(settings) {
     for (var i = 0, l = this.flagstoneHeights.length; i < l; i++) {
       if (i < this.columns) {
         // First "row"
-        for (var ii = 0, ll = this.columns; ii < ll; ii++) {
-          if (this.jqueryAnimation) {
-            this.flagstones.eq(ii).animate({
-              'top': this.areaMargin + 'px',
-              'left': this.direction === 'right' ? 'auto' : (this.flagstoneWidth * ii + (ii ? this.flagstonesMargin * ii + this.areaMargin : this.areaMargin)) + 'px',
-              'right': this.direction === 'left' ? 'auto' : (this.flagstoneWidth * ii + (ii ? this.flagstonesMargin * ii + this.areaMargin : this.areaMargin)) + 'px'
-            }, this.duration * 1000);
-          } else {
-            this.flagstones.eq(ii).css({
-              'top': this.areaMargin + 'px',
-              'left': this.direction === 'right' ? 'auto' : (this.flagstoneWidth * ii + (ii ? this.flagstonesMargin * ii + this.areaMargin : this.areaMargin)) + 'px',
-              'right': this.direction === 'left' ? 'auto' : (this.flagstoneWidth * ii + (ii ? this.flagstonesMargin * ii + this.areaMargin : this.areaMargin)) + 'px'
-            });
-          }
-          columnHeights[ii] = this.flagstoneHeights[ii] + this.areaMargin;
+        if (this.jqueryAnimation) {
+          this.flagstones.eq(i).animate({
+            'top': this.areaMargin + 'px',
+            'left': this.direction === 'right' ? 'auto' : (this.flagstoneWidth * i + (i ? this.flagstonesMargin * i + this.areaMargin : this.areaMargin)) + 'px',
+            'right': this.direction === 'left' ? 'auto' : (this.flagstoneWidth * i + (i ? this.flagstonesMargin * i + this.areaMargin : this.areaMargin)) + 'px'
+          }, this.duration * 1000);
+        } else {
+          this.flagstones.eq(i).css({
+            'top': this.areaMargin + 'px',
+            'left': this.direction === 'right' ? 'auto' : (this.flagstoneWidth * i + (i ? this.flagstonesMargin * i + this.areaMargin : this.areaMargin)) + 'px',
+            'right': this.direction === 'left' ? 'auto' : (this.flagstoneWidth * i + (i ? this.flagstonesMargin * i + this.areaMargin : this.areaMargin)) + 'px'
+          });
         }
+        columnHeights[i] = this.flagstoneHeights[i] + this.areaMargin;
       } else {
         // Every other "row"
         var smallestColumnHeight = Math.min.apply(null, columnHeights);
