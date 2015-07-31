@@ -13,7 +13,10 @@
 <p><a href="http://codepen.io/clearwavedesigns/full/gbOrvR" target="_blank">1.3-jquery Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
 <img src="http://cdn.clearwavedesigns.com/flagstonejs-1.3.jpg" alt="FlagstoneJS 1.3"/>
 <br/>
-<small>COPYRIGHT (C) 2014-2015 by CLEARWAVE DESIGNS, LLC.  All rights reserved.</small>
+<br/>
+<br/>
+
+<small>COPYRIGHT (C) 2014-2015 by CLEARWAVE DESIGNS, LLC.</small>
 
 <ul>
   <li>Name (official): FlagstoneJS</li>
