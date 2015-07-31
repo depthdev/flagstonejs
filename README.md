@@ -44,7 +44,7 @@
       <p><strong>&#160;&#160;flagstonesMargin: 10,</strong> <em>// Margin between flagstones in pixels (as an int)</em></p>
       <p><strong>&#160;&#160;margin: 10,</strong> <em>// This overrides areaMargin & flagstoneMargin and is equivalent to setting them both to this value</em></p>
       <p><strong>&#160;&#160;minWidth: 300,</strong> <em>// Minimum width you want the tilable elements (pixels as int)</em></p>
-      <p><strong>&#160;&#160;maxColumns: 5,</strong> <em> // Maximum number of columns to display (as an int)
+      <p><strong>&#160;&#160;maxColumns: 5,</strong> <em> // Maximum number of columns to display (as an int)</em></p>
       <p><strong>&#160;&#160;direction: 'left',</strong> <em>// Alternative is "right"; the default is "left"; and for top to bottom, use CSS's built in Columns or Flexbox</em></p>
       <p><strong>&#160;&#160;random: false,</strong> <em>// Display flagstones in a random order; the default is false (as a boolean)</em></p>
       <p><strong>&#160;&#160;square: false,</strong> <em>// Makes each flagstone square; default is false</em></p>
