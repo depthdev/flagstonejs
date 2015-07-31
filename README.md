@@ -1,13 +1,15 @@
 <h1>FlagstoneJS</h1>
 <h2>"Responsive Tiling"</h2>
-
-<p><strong>Current Version:</strong> 2.0.20150731</p>
-<p><strong>Current Version:</strong> 1.3.20150731</p>
-
-<h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size.</h3>
 <br/>
-<p><a href="http://codepen.io/clearwavedesigns/full/QbVLgQ" target="_blank">Live demo</a> (No dependencies with CSS-only animation)</p>
-<p><a href="http://codepen.io/clearwavedesigns/full/gbOrvR" target="_blank">Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
+<p><strong>Current Version:</strong> 2.0.20150731 (version 1.3 reloaded with many more options)</p>
+<p><strong>Current Version:</strong> 1.3.20150731</p>
+<br/>
+<h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size; and, comes with many additional features and options.</h3>
+<br/>
+<p><a href="http://codepen.io/clearwavedesigns/full/VLqZMg" target="_blank">v2.0 Live demo</a> (No dependencies with CSS-only animation)</p>
+<br/>
+<p><a href="http://codepen.io/clearwavedesigns/full/QbVLgQ" target="_blank">v1.3 Live demo</a> (No dependencies with CSS-only animation)</p>
+<p><a href="http://codepen.io/clearwavedesigns/full/gbOrvR" target="_blank">v1.3-jquery Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
 <br/>
 <small>COPYRIGHT (C) 2014-2015 by CLEARWAVE DESIGNS, LLC.  All rights reserved.</small>
 
