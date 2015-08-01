@@ -22,8 +22,8 @@
    Slogan:        "Responsive tiling."
    Description:   Responsively tiles HTML elements left or right, top to bottom, and where there's the most room.
  */
- 
- function FLAGSTONE(settings) {
+
+function FLAGSTONE(settings) {
 
   var _ = function(s) { var a = [], nl = document.querySelectorAll(s); for (var i = 0, l = nl.length; i < l; i++) { a[i] = nl[i]; } return a.length > 1 ? a : a[0]; };
 
@@ -48,7 +48,6 @@
   this.flagstonesMargin = o.margin || o.margin === 0 ? o.margin : o.flagstonesMargin || o.flagstonesMargin === 0 ? o.flagstonesMargin : 10;
   this.flagstoneWidth = (this.areaWidth / this.columns) - ((this.flagstonesMargin * (this.columns + 1)) / this.columns);
   this.flagstoneHeights = [];
-  this.flagstoneHeightsAvg = 0;
   // DIRECTION
   this.direction = o.direction ? o.direction.toLowerCase() : 'left';
   // RANDOM POSITIONS
@@ -92,7 +91,9 @@
           columnHeights[i] = this.flagstoneHeights[i] + this.areaMargin;
           this.custom(i, this.flagstones[i]);
         } else {
-          columnHeights[i] = this.flagstoneHeightsAvg + this.areaMargin;
+          if (this.columns > 1) {
+            columnHeights[i] = this.flagstoneWidth + this.areaMargin;
+          }
         }
       } else {
         // Every other "row"
@@ -105,7 +106,9 @@
           columnHeights[smallestColumn] += this.flagstoneHeights[i] + this.flagstonesMargin;
           this.custom(i, this.flagstones[i]);
         } else {
-          columnHeights[smallestColumn] += this.flagstoneHeightsAvg + this.flagstonesMargin;
+          if (this.columns > 1) {
+            columnHeights[smallestColumn] += this.flagstoneWidth + this.flagstonesMargin;
+          }
         }
       }
       this.area.style.height = (Math.max.apply(null, columnHeights) || this.flagstoneHeights[0] + this.areaMargin) + this.areaMargin + 'px';
@@ -131,16 +134,12 @@
     that.flagstoneWidth = (that.areaWidth / that.columns) - ((that.flagstonesMargin * (that.columns - 1) + (that.areaMargin * 2)) / that.columns);
     // Set heights
     that.flagstoneHeights = [];
-    that.flagstoneHeightsAvg = 0;
     for (var i = 0, l = that.flagstones.length; i < l; i++) {
       if (that.flagstones[i]) {
         that.flagstones[i].style.width = that.flagstoneWidth + 'px';
       }
       that.flagstoneHeights.push(that.square || !that.flagstones[i] ? that.flagstoneWidth : that.flagstones[i].outerHeight || that.flagstones[i].offsetHeight);
-      that.flagstoneHeightsAvg += that.flagstoneHeights[i];
     }
-    // Set actual average heights
-    that.flagstoneHeightsAvg = that.flagstoneHeightsAvg / that.flagstones.length;
     that.run();
   };
   // DYNAMIC CONTENT RESET / HARD RESET
