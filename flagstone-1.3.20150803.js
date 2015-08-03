@@ -18,7 +18,7 @@ Website:       http://clearwavedesigns.com
 Dependencies:  None.
  
 Name(s):       FlagstoneJS (flagstone.js)
-Version:       1.3.20150731
+Version:       1.3.20150803
 Slogan:        "Responsive tiling."
 Description:   Responsively tiles HTML elements left or right, top to bottom, and where there's the most room.
  */
@@ -137,7 +137,7 @@ function FLAGSTONE(settings) {
     // Run reset to calculate and run flagstone!
     setTimeout(that.reset, 0);
     // Reset immediately after resources have loaded to get correct heights
-    setTimeout(window.addEventListener('load', that.resets), 0);
+    window.addEventListener('load', that.resets);
     // Resize listener
     window.addEventListener('resize', that.resets);
   };
