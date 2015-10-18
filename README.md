@@ -5,6 +5,7 @@
 </a>
 <br/>
 <p><strong>Current Version:</strong> 2.1.20150803 (version 1.3 reloaded with many more options)</p>
+<hr/>
 <p><strong>Deprecated Versions:</strong> 2.0 &#38; 1.3</p>
 
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size; and, comes with many additional features and options.</h3>
