@@ -4,7 +4,7 @@
   <img src="http://cdn.clearwavedesigns.com/flagstonejs-2.1.jpg" alt="FlagstoneJS 2.1"/>
 </a>
 <br/>
-<p><strong>Current Version:</strong> 2.1.20150803</p>
+<p><strong>Current Version:</strong> 2.1.20151017</p>
 <p><strong>Deprecated Versions:</strong> 2.0 &#38; 1.3</p>
 <hr/>
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size; and, comes with many additional features and options.</h3>
