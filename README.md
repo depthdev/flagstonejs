@@ -8,9 +8,7 @@
 <p><strong>Deprecated Versions:</strong> 2.0 &#38; 1.3</p>
 <hr/>
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size; and, comes with many additional features and options.</h3>
-<br/>
 <p><a href="http://codepen.io/clearwavedesigns/full/vNWpGM" target="_blank">2.1 Live demo</a> (Reloaded with many more options. No dependencies. CSS-only animation)</p>
-<br/>
 <hr/>
 <p><a href="http://codepen.io/clearwavedesigns/full/QbVLgQ" target="_blank">1.3 Live demo</a> (No dependencies with CSS-only animation)</p>
 <p><a href="http://codepen.io/clearwavedesigns/full/gbOrvR" target="_blank">1.3-jquery Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
