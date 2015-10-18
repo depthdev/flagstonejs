@@ -83,7 +83,6 @@ function FLAGSTONE(settings) {
         // First "row"
         if (flagstones[i]) {
           var width = flagstones[i].style.cssText.replace(/.*width\:\s?(\d+).+/, '$1');
-          flagstones[i].style = '';
           flagstones[i].style.cssText = 'width:' + width + 'px;' + (square ? 'height:' + width + 'px;': '') + 'top:' + areaMargin + 'px;' + direction + ':' + (flagstoneWidth * i + (i ? flagstonesMargin * i + areaMargin : areaMargin)) + 'px;';
           columnHeights[i] = flagstoneHeights[i] + areaMargin;
           custom(i, flagstones[i]);
@@ -98,7 +97,6 @@ function FLAGSTONE(settings) {
         var smallestColumn = columnHeights.indexOf(smallestColumnHeight);
         if (flagstones[i]) {
           var width = flagstones[i].style.cssText.replace(/.*width\:\s?(\d+).+/, '$1');
-          flagstones[i].style = '';
           flagstones[i].style.cssText = 'width:' + width + 'px;' + (square ? 'height:' + width + 'px;': '') + 'top:' + (smallestColumnHeight + flagstonesMargin) + 'px;' + direction + ':' + (flagstoneWidth * smallestColumn + (smallestColumn ? flagstonesMargin * smallestColumn + areaMargin : areaMargin)) + 'px;';
           columnHeights[smallestColumn] += flagstoneHeights[i] + flagstonesMargin;
           custom(i, flagstones[i]);
@@ -169,8 +167,8 @@ function FLAGSTONE(settings) {
     // Run reset to calculate and run flagstone!
     setTimeout(this.reset, 0);
     // Reset immediately after resources have loaded to get correct heights
-    window.addEventListener('load', resets.bind(this));
+    addEventListener('load', resets.bind(this));
     // Resize listener
-    window.addEventListener('resize', resets.bind(this));
+    addEventListener('resize', resets.bind(this));
   }.bind(this))()
 } // end FLAGSTONEJS
