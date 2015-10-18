@@ -1,14 +1,15 @@
 <h1>FlagstoneJS</h1>
 <h2>"Responsive Tiling"</h2>
-<img src="http://cdn.clearwavedesigns.com/flagstonejs-2.0.jpg" alt="FlagstoneJS 2.0"/>
+<a href="http://codepen.io/clearwavedesigns/full/vNWpGM" target="_blank">
+  <img src="http://cdn.clearwavedesigns.com/flagstonejs-2.1.jpg" alt="FlagstoneJS 2.1"/>
+</a>
 <br/>
-<p><strong>Current Version:</strong> 2.0.20150803 (version 1.3 reloaded with many more options)</p>
-<p><strong>Current Version:</strong> 1.3.20150803</p>
+<p><strong>Current Version:</strong> 2.1.20150803 (version 1.3 reloaded with many more options)</p>
+<p><strong>Deprecated Versions:</strong> 2.0 &#38; 1.3</p>
 
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size; and, comes with many additional features and options.</h3>
 <br/>
-<p><a href="http://codepen.io/clearwavedesigns/full/VLqZMg" target="_blank">2.0 Live demo</a> (Reloaded with many more options. No dependencies. CSS-only animation)</p>
-<img src="http://cdn.clearwavedesigns.com/flagstonejs-2.0.jpg" alt="FlagstoneJS 2.0"/>
+<p><a href="http://codepen.io/clearwavedesigns/full/vNWpGM" target="_blank">2.1 Live demo</a> (Reloaded with many more options. No dependencies. CSS-only animation)</p>
 <br/>
 <br/>
 <hr/>
