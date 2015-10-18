@@ -1,3 +1,28 @@
+/*
+   Copyright 2014-2015 CLEARWAVE DESIGNS, LLC
+   
+      Licensed under the Apache License, Version 2.0 (the "License");
+      you may not use this file except in compliance with the License.
+      You may obtain a copy of the License at
+   
+          http://www.apache.org/licenses/LICENSE-2.0
+   
+      Unless required by applicable law or agreed to in writing, software
+      distributed under the License is distributed on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+      See the License for the specific language governing permissions and
+      limitations under the License.
+    
+   Author:        Adam Carson
+   Website:       http://clearwavedesigns.com
+   Dependencies:  None.
+    
+   Name(s):       FlagstoneJS (flagstone.js)
+   Version:       2.1.20151017
+   Slogan:        "Responsive tiling."
+   Description:   Responsively tiles HTML elements left or right, top to bottom, and where there's the most room.
+ */
+ 
 function FLAGSTONE(settings) {
 
   var _ = function(s) { var a = [], nl = document.querySelectorAll(s); for (var i = 0, l = nl.length; i < l; i++) { a[i] = nl[i]; } return a.length > 1 ? a : a[0]; };
