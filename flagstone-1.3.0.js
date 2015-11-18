@@ -1,6 +1,6 @@
 /*
  FlagstoneJS v1.3.0
- (c) 2015 Depth Development. http://depthdev.com
+ (c) 2014 Depth Development. http://depthdev.com
  License: Apache 2.0
 */
 
