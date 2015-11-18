@@ -1,6 +1,6 @@
 /*
  FlagstoneJS v1.3.0-jquery
- (c) 2015 Clearwave Designs, LLC. http://clearwavedesigns.com
+ (c) 2013-2014 Depth Development. http://depthdev.com
  License: Apache 2.0
 */
 
