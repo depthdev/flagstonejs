@@ -17,7 +17,7 @@
 <br/>
 <br/>
 
-<small>COPYRIGHT (C) 2014-2015 by CLEARWAVE DESIGNS, LLC.</small>
+<small>(c) 2013-2015 Depth Development. http://depthdev.com</small>
 
 <ul>
   <li>Name (official): FlagstoneJS</li>
