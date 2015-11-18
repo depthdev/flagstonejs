@@ -1,6 +1,6 @@
 <h1>FlagstoneJS</h1>
 <h2>"Responsive Tiling"</h2>
-<a href="http://codepen.io/clearwavedesigns/pen/vNWpGM" target="_blank">
+<a href="http://codepen.io/depthdev/pen/vNWpGM" target="_blank">
   <img src="http://cdn.clearwavedesigns.com/flagstonejs-2.1.jpg" alt="FlagstoneJS 2.1"/>
 </a>
 <br/>
@@ -8,10 +8,10 @@
 <p><strong>Deprecated Versions:</strong> 2.0 &#38; 1.3</p>
 <hr/>
 <h3>Responsively positions HTML elements left or right and top to bottom, regardless of content size; and, comes with many additional features and options.</h3>
-<p><a href="http://codepen.io/clearwavedesigns/pen/vNWpGM" target="_blank">2.1 Live demo</a> (Reloaded with many more options. No dependencies. CSS-only animation)</p>
+<p><a href="http://codepen.io/depthdev/pen/vNWpGM" target="_blank">2.1 Live demo</a> (Reloaded with many more options. No dependencies. CSS-only animation)</p>
 <hr/>
-<p><a href="http://codepen.io/clearwavedesigns/pen/QbVLgQ" target="_blank">1.3 Live demo</a> (No dependencies with CSS-only animation)</p>
-<p><a href="http://codepen.io/clearwavedesigns/pen/gbOrvR" target="_blank">1.3-jquery Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
+<p><a href="http://codepen.io/depthdev/pen/QbVLgQ" target="_blank">1.3 Live demo</a> (No dependencies with CSS-only animation)</p>
+<p><a href="http://codepen.io/depthdev/pen/gbOrvR" target="_blank">1.3-jquery Live demo</a> (jQuery dependent with optional jQuery animation instead of default CSS animation)</p>
 <img src="http://cdn.clearwavedesigns.com/flagstonejs-1.3.jpg" alt="FlagstoneJS 1.3"/>
 <br/>
 <br/>
