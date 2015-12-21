@@ -4,7 +4,7 @@
  License: Apache 2.0
 */
 
-function FLAGSTONE(settings) {
+function Flagstone(settings) {
 
   var _ = function(s) { var a = [], nl = document.querySelectorAll(s); for (var i = 0, l = nl.length; i < l; i++) { a[i] = nl[i]; } return a.length > 1 ? a : a[0]; };
 
