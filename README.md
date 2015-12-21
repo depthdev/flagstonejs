@@ -41,9 +41,9 @@
   <h3>JavaScript</h3>
   <p>Initialize a Flagstone instance and pass in the <em>optional</em> settings.</p>
   <code>
-   <p><strong>var fs = new FLAGSTONE();</strong></p>
+   <p><strong>var fs = new Flagstone();</strong></p>
    <p>-OR-</p>
-    <p><strong>var fs = new FLAGSTONE({</strong></p>
+    <p><strong>var fs = new Flagstone({</strong></p>
       <p><strong>&#160;&#160;area: '.js-floor',</strong> <em>// Wrapping element (as a selector string)</em></p>
       <p><strong>&#160;&#160;areaMargin: 10,</strong> <em>// The padding around the area edge in pixels (as an int)</em></p>
       <p><strong>&#160;&#160;flagstones: '.js-tile',</strong> <em>// Tilable elements (as a selector string)</em></p>
