@@ -6,12 +6,13 @@
 
 function Flagstone(settings) {
 
-  var _ = function(s) { var a = [], nl = document.querySelectorAll(s); for (var i = 0, l = nl.length; i < l; i++) { a[i] = nl[i]; } return a.length > 1 ? a : a[0]; };
-
+  var $ = function(s) { return document.querySelector(s); };
+  var $$ = function(s) { var a = [], nl = document.querySelectorAll(s); for (var i = 0, l = nl.length; i < l; i++) { a[i] = nl[i]; } return a; };
+ 
   var o = settings || {};
   // AREA (CONTAINER)
   var areaStr = o.area || '[flagstones]';
-  var area = _(areaStr);
+  var area = $(areaStr);
   var areaMargin = o.margin || o.margin === 0 ? o.margin : o.areaMargin || o.areaMargin === 0 ? o.areaMargin : 10;
   var areaWidth = 0;
   var areaHeight = 0;
@@ -23,7 +24,7 @@ function Flagstone(settings) {
   var columns = 0;
   // FLAGSTONES
   var flagstonesStr = o.flagstones || '[flagstone]';
-  var flagstones = _(flagstonesStr);
+  var flagstones = $$(flagstonesStr);
   var flagstonesMargin = o.margin || o.margin === 0 ? o.margin : o.flagstonesMargin || o.flagstonesMargin === 0 ? o.flagstonesMargin : 10;
   var flagstoneWidth = (areaWidth / columns) - ((flagstonesMargin * (columns + 1)) / columns);
   var flagstoneHeights = [];
@@ -98,6 +99,8 @@ function Flagstone(settings) {
   var resetDelay2;
   var resetDelay3;
   this.reset = function() {
+    var bb = 9;
+    if (!flagstones.length) { return false; }
     // Set area
     areaWidth = area.outerWidth || area.offsetWidth;
     if (areaWidth < minWidth + (areaMargin ? areaMargin * 2 : 0)) {
@@ -121,7 +124,7 @@ function Flagstone(settings) {
   this.hardReset = function() {
     this.hide();
     setTimeout(function() {
-      flagstones = _(flagstonesStr);
+      flagstones = $$(flagstonesStr);
       if (random) { flagstones.sort(function(){return 0.5-Math.random();}); }
       if (space) { spaceGenerator(); }
       this.reset();
@@ -140,13 +143,13 @@ function Flagstone(settings) {
   (function() {
     this.hide;
     // Setup styles if not already injected (prevents duplicates on single page applications)
-    if (!_('#flagstone-styles')) {
+    if (!$('#flagstone-styles')) {
       var styles = areaStr + '{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;min-width:' + (minWidth + (flagstonesMargin * 2)) + 'px;}' + flagstonesStr + '{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:absolute;top:0px;' + direction + ':0px;}' + areaStr + '.flagstones-hidden{visibility:hidden;}' + areaStr + '{-webkit-transition-duration:' + duration + 's;-moz-transition-duration:' + duration + 's;-ms-transition-duration:' + duration + 's;-o-transition-duration:' + duration + 's;transition-duration:' + duration + 's;}' + flagstonesStr + '{-webkit-transition-duration:' + duration + 's;-moz-transition-duration:' + duration + 's;-ms-transition-duration:' + duration + 's;-o-transition-duration:' + duration + 's;transition-duration:' + duration + 's;}';
       var style = document.createElement('style');
       style.type = 'text/css';
       style.id = 'flagstone-styles';
       style.appendChild(document.createTextNode(styles));
-      _('head').appendChild(style);
+      $('head').appendChild(style);
     }
     // Run reset to calculate and run flagstone!
     setTimeout(this.reset, 0);
