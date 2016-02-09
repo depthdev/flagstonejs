@@ -1,7 +1,7 @@
 /*
  FlagstoneJS v2.1.2
  (c) 2015 Depth Development. http://depthdev.com
- License: Apache 2.0
+ License: MIT
 */
 
 function Flagstone(settings) {
