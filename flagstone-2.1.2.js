@@ -1,5 +1,5 @@
 /*
- FlagstoneJS v2.1.2
+ FlagstoneJS v2.1.3
  (c) 2015 Depth Development. http://depthdev.com
  License: MIT
 */
@@ -91,7 +91,7 @@ function Flagstone(settings) {
       area.style.height = (Math.max.apply(null, columnHeights) || flagstoneHeights[0] + areaMargin) + areaMargin + 'px';
     }
     setTimeout(function() {
-      area.className = area.className.replace(/\s?flagstones\-hidden/, '');
+      area.className = area.className.replace(/\s?flagstones\-hidden/g, '');
     }.bind(this), 0);
   }; // end run()
   // RESIZE AND RESET
