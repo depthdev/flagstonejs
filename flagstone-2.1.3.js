@@ -1,6 +1,6 @@
 /*
  FlagstoneJS v2.1.3
- (c) 2015 Depth Development. http://depthdev.com
+ (c) 2015-2016 Depth Development. http://depthdev.com
  License: MIT
 */
 
