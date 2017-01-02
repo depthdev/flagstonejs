@@ -19,33 +19,28 @@ OR
 
 OR
 
+<p style="font-size:10px;">(NOTE: Values below represent the default values)</p>
 const fs = flagstone({  
-  **elem:** document.getElementsByTagName('article')[0], // Wrapping element  
-  //bedPadding: 10, // The padding around the area edge in pixels (as an int)  
-  //stonesMargin: 10, // Margin between stones in pixels (as an int)  
-  margin: 10, // This overrides areaMargin & flagstonePadding and is equivalent to setting them both to this value  
-  minWidth: 280, // Minimum width you want an element to be in pixels (as an int)  
-  maxColumns: 5, // Maximum number of columns to display (as an int)  
-  direction: 'left', // Alternative is "right"; the default is "left"; and for top to bottom, use CSS's built in Columns or Flexbox  
-  random: false, // Display stones in a random order; the default is false (as a boolean)  
-  square: false, // Makes each flagstone square; default is false  
-  space: false, // Spaces out stones randomly (as a boolean)  
-  spaceFrequency: 0.4, // Adjusts the frequency of the amount of spaces (as a float 0.0 - 1.0); default is 0.4  
-  animationDuration: 1000, // Animation duration (milliseconds as an int); default is 0  
-  animationTimingFunction: 'ease', // CSS animation timing function as a string  
-  resizeDelay: 250, // Delay to run resize/reset function after resizing the window in milliseconds (as an int); default is 250  
-  imagesLoadedQueryDuration: 2500,  
-  imagesLoadedQueryFrequency: 100,  
-  dragAndDrop: true,  
-  eventResetDelay: 250,  
-  callback: function(elem, index) { // Warning! This gets called every soft reset, so if you're attaching listeners, you'll need to remove the listeners first!
-    if (index === 3) {
-      elem.classList.add('highlight');
-    } else {
-      elem.classList.remove('highlight');
-    }
-  } // Callback function for each element with index and element arguments
-});
+  &#160;&#160;&#160;&#160;**elem:** document.getElementsByTagName('article')[0], *// Wrapping element*  
+  &#160;&#160;&#160;&#160;**//bedPadding:** 10, *// The padding around the area edge*  
+  &#160;&#160;&#160;&#160;**//stonesMargin:** 10, *// Margin between stones*  
+  &#160;&#160;&#160;&#160;**margin:** 10, *// This overrides bedPadding &#38; stonesMargin and is equivalent to setting them both to this value*  
+  &#160;&#160;&#160;&#160;**minWidth:** 280, *// Minimum width you want an element to be*  
+  &#160;&#160;&#160;&#160;**maxColumns:** 5, *// Maximum number of columns to display*  
+  &#160;&#160;&#160;&#160;**direction:** 'left', *// Alternative is "right"*  
+  &#160;&#160;&#160;&#160;**random:** false, *// Display stones in a random order*  
+  &#160;&#160;&#160;&#160;**square:** false, *// Makes each flagstone square*  
+  &#160;&#160;&#160;&#160;**space:** false, *// Spaces out stones randomly*  
+  &#160;&#160;&#160;&#160;**spaceFrequency:** 0.4, *// Adjusts the frequency of the amount of spaces (as a float 0.0 - 1.0)*  
+  &#160;&#160;&#160;&#160;**animationDuration:** 0, *// Animation duration (milliseconds)*
+  &#160;&#160;&#160;&#160;**animationTimingFunction:** 'linear', *// CSS animation timing function as a string*  
+  &#160;&#160;&#160;&#160;**resizeDelay:** 250, *// Delay to run resize/reset function after resizing the window (milliseconds)*  
+  &#160;&#160;&#160;&#160;**imagesLoadedQueryDuration:** 2500, *// Duration to check for images that have finished loading after instantiation (milliseconds).*  
+  &#160;&#160;&#160;&#160;**imagesLoadedQueryFrequency:** 100, *// Frequency to check for images that have loaded within the imagesLoadedQueryDuration (milliseconds)*  
+  &#160;&#160;&#160;&#160;**dragAndDrop:** false, *// Enable drag n' drop*  
+  &#160;&#160;&#160;&#160;**eventResetDelay:** 0, *// Delay to call reset when an element with "flagstone-reset" is triggered (important when resizing CSS animations are used)*  
+  &#160;&#160;&#160;&#160;**callback:** function(elem, index) {} *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
+**});**
 
 
 
