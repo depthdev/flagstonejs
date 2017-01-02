@@ -33,7 +33,7 @@ OR
   &#160;&#160;&#160;&#160;**square:** false, *// Makes each flagstone square*  
   &#160;&#160;&#160;&#160;**space:** false, *// Spaces out stones randomly*  
   &#160;&#160;&#160;&#160;**spaceFrequency:** 0.4, *// Adjusts the frequency of the amount of spaces (as a float 0.0 - 1.0)*  
-  &#160;&#160;&#160;&#160;**animationDuration:** 0, *// Animation duration (milliseconds)*
+  &#160;&#160;&#160;&#160;**animationDuration:** 0, *// Animation duration (milliseconds)*  
   &#160;&#160;&#160;&#160;**animationTimingFunction:** 'linear', *// CSS animation timing function as a string*  
   &#160;&#160;&#160;&#160;**resizeDelay:** 250, *// Delay to run resize/reset function after resizing the window (milliseconds)*  
   &#160;&#160;&#160;&#160;**imagesLoadedQueryDuration:** 2500, *// Duration to check for images that have finished loading after instantiation (milliseconds).*  
