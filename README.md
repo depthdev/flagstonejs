@@ -19,11 +19,11 @@ OR
 
 OR
 
-<p style="font-size:10px;">(NOTE: Values below represent the default values)</p>
-const fs = flagstone({  
+*(NOTE: Values below represent the default values)*  
+**const fs = flagstone({**  
   &#160;&#160;&#160;&#160;**elem:** document.getElementsByTagName('article')[0], *// Wrapping element*  
-  &#160;&#160;&#160;&#160;**//bedPadding:** 10, *// The padding around the area edge*  
-  &#160;&#160;&#160;&#160;**//stonesMargin:** 10, *// Margin between stones*  
+  &#160;&#160;&#160;&#160;**bedPadding:** 10, *// The padding around the area edge*  
+  &#160;&#160;&#160;&#160;**stonesMargin:** 10, *// Margin between stones*  
   &#160;&#160;&#160;&#160;**margin:** 10, *// This overrides bedPadding &#38; stonesMargin and is equivalent to setting them both to this value*  
   &#160;&#160;&#160;&#160;**minWidth:** 280, *// Minimum width you want an element to be*  
   &#160;&#160;&#160;&#160;**maxColumns:** 5, *// Maximum number of columns to display*  
@@ -43,43 +43,48 @@ const fs = flagstone({
 **});**
 
 
+### METHODS:
 
+#### Adjust
+**fs.adjust({**
+&#160;&#160;&#160;&#160;**margin:** 10,  
+&#160;&#160;&#160;&#160;**bedPadding:** 10,  
+&#160;&#160;&#160;&#160;**stonesMargin:** 10,  
+&#160;&#160;&#160;&#160;**minWidth:** 280,  
+&#160;&#160;&#160;&#160;**maxColumns:** 5,  
+&#160;&#160;&#160;&#160;**square:** false,  
+&#160;&#160;&#160;&#160;**dragAndDrop:** true,  
+&#160;&#160;&#160;&#160;**callback:** function(elem, index) {}  
+**});**
 
+#### DESTROY
+Removes attached Window event listeners.  
+**fs.destroy();**
 
-// METHODS:
+#### RESET (Soft)
+Re-calculates sizes and spacing of existing stones.  
+**fs.reset();** // Good for adjusting static content.
 
-// ADJUST
-  // fs.adjust({
-  //   margin: 10,
-  //   bedPadding: 10,
-  //   stonesMargin: 10,
-  //   minWidth: 280,
-  //   maxColumns: 5,
-  //   square: false,
-  //   dragAndDrop: true,
-  //   callback: function() {}
-  // });
+#### RESET (Hard)
+Finds stones anew, adds any applicable listeners, and resets all positions.  
+**fs.hardReset();**
 
-// DESTROY | fs.destroy(); // Removes window resize event listener for the given Flagstone instance.
+#### HIDE
+Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM.  
+**fs.hide();**
 
-// SOFT RESET | fs.reset(); // Good for adjusting static content.
-
-// HARD RESET | fs.hardReset(); // Great for dynamic content such and Angular, AJAX or other injected content.
-
-// HIDE | fs.hide(); // Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM.
-
-/* Example styling for drag and drop
-  .flagstone-0-bed.flagstone-dragover {
-    box-shadow: inset 0 0 4px 4px $yellow;
-  }
-  .flagstone-drag {
-    filter: grayscale(1) blur(4px);
-    opacity: 0.25;
-  }
-  .flagstone-left {
-    box-shadow: -8px 0 4px -4px $yellow;
-  }
-  .flagstone-right {
-    box-shadow: 8px 0 4px -4px $yellow;
-  }
-  */
+### Other
+#### Example styling for drag and drop
+**.flagstone-0-bed.flagstone-dragover {**  
+&#160;&#160;&#160;&#160;box-shadow: inset 0 0 4px 4px #fff;  
+**}**  
+**.flagstone-drag {**  
+&#160;&#160;&#160;&#160;filter: grayscale(1) blur(4px);  
+&#160;&#160;&#160;&#160;opacity: 0.25;  
+**}**  
+**.flagstone-left {**  
+&#160;&#160;&#160;&#160;box-shadow: -8px 0 4px -4px #fff;  
+**}**  
+**.flagstone-right {**  
+&#160;&#160;&#160;&#160;box-shadow: 8px 0 4px -4px #fff;  
+**}**
