@@ -1,5 +1,5 @@
 # FlagstoneJS
-## Dynamic Tiling
+## Dynamic &#38; responsive tiling
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
