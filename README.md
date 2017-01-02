@@ -89,7 +89,7 @@ Elements with the `flagstone-reset` class on them will trigger a soft reset when
 ---
 
 ### Other
-#### Example styling for drag and drop
+#### Example styling for drag and drop:
 **.flagstone-0-bed.flagstone-dragover {**  
 &#160;&#160;&#160;&#160;box-shadow: inset 0 0 4px 4px #fff;  
 **}**  
