@@ -45,8 +45,9 @@ OR
 
 ### METHODS:
 
-#### Adjust
-**fs.adjust({**
+#### ADJUST
+Allows the developer to provide options to the user to change settings on the fly.  
+**fs.adjust({**  
 &#160;&#160;&#160;&#160;**margin:** 10,  
 &#160;&#160;&#160;&#160;**bedPadding:** 10,  
 &#160;&#160;&#160;&#160;**stonesMargin:** 10,  
@@ -72,6 +73,8 @@ Finds stones anew, adds any applicable listeners, and resets all positions.
 #### HIDE
 Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM.  
 **fs.hide();**
+
+---
 
 ### Other
 #### Example styling for drag and drop
