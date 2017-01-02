@@ -9,6 +9,8 @@
 
 ### Download the ES5 minified version, or ES6 expanded version.
 
+---
+
 ### Instantiate a Flagstone instance
 
 `const fs = flagstone(); // Requires the wrapper element to have a class of ".flagstone" on it.`
@@ -19,7 +21,6 @@ OR
 
 OR
 
-*(NOTE: Values below represent the default values)*  
 **const fs = flagstone({**  
   &#160;&#160;&#160;&#160;**elem:** document.getElementsByTagName('article')[0], *// Wrapping element*  
   &#160;&#160;&#160;&#160;**bedPadding:** 10, *// The padding around the area edge*  
@@ -42,6 +43,7 @@ OR
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {} *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
 **});**
 
+---
 
 ### METHODS:
 
@@ -74,6 +76,15 @@ Finds stones anew, adds any applicable listeners, and resets all positions.
 Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM.  
 **fs.hide();**
 
+---
+
+### CLASSES
+
+#### flagstone-remove
+Elements with the `flagstone-remove` class on them will cause the stone it's contained within to be removed from the DOM when *clicked*; or, when the *enter* or *space* keys are pressed.
+
+#### flagstone-reset
+Elements with the `flagstone-reset` class on them will trigger a soft reset when *clicked*; or, when the *enter* or *space* keys are pressed.
 ---
 
 ### Other
