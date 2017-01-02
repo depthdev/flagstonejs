@@ -85,6 +85,7 @@ Elements with the `flagstone-remove` class on them will cause the stone it's con
 
 #### flagstone-reset
 Elements with the `flagstone-reset` class on them will trigger a soft reset when *clicked*; or, when the *enter* or *space* keys are pressed.
+
 ---
 
 ### Other
