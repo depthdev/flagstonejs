@@ -62,7 +62,7 @@ Allows the developer to provide options to the user to change settings on the fl
 **});**
 
 #### DESTROY
-Removes attached Window event listeners.  
+Removes Window resize event listener, and removes the styles from the document head.
 **fs.destroy();**
 
 #### RESET (Soft)
