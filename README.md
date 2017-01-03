@@ -62,19 +62,19 @@ Allows the developer to provide options to the user to change settings on the fl
 **});**
 
 #### DESTROY
-Removes Window resize event listener, and removes the styles from the document head.
+Removes Window resize event listener, and removes the styles from the document head.  
 **fs.destroy();**
 
 #### RESET (Soft)
-Re-calculates sizes and spacing of existing stones.  
+Re-calculates sizes and spacing of existing stones. This is handled automatically on resize, and when an element with a class of `flagstone-reset` is selected.  
 **fs.reset();** // Good for adjusting static content.
 
 #### RESET (Hard)
-Finds stones anew, adds any applicable listeners, and resets all positions.  
+Finds stones anew, adds any applicable listeners, and resets all positions. IMPORTANT: In most cases, this will never be needed as DOM changes are being listened for already and will call this method automatically.  
 **fs.hardReset();**
 
 #### HIDE
-Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM.  
+Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM. IMPORTANT: Generally speaking, most use cases are handled automatically.  
 **fs.hide();**
 
 ---
