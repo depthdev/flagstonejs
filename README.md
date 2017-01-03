@@ -11,7 +11,8 @@
 
 ---
 
-### Instantiate a Flagstone instance
+### Instantiate 1 or more Flagstone instances
+NOTE: Calling `flagstone()` returns a new Flagstone instance.
 
 `const fs = flagstone(); // Requires the wrapper element to have a class of ".flagstone" on it.`
 
