@@ -11,6 +11,11 @@
 
 ---
 
+### Hide the content
+For instances with large amounts of "stones," it's recommended that you hard code this attribute and style: `style="visibility:hidden;`.
+
+---
+
 ### Instantiate 1 or more Flagstone instances
 NOTE: Calling `flagstone()` returns a new Flagstone instance.
 
