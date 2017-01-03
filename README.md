@@ -12,7 +12,7 @@
 ---
 
 ### Hide the content
-For instances with large amounts of "stones," it's recommended that you hard code this attribute and style: `style="visibility:hidden;`.
+For instances with large amounts of "stones," it's recommended that you hard code this attribute and style: `style="visibility:hidden;"`.
 
 ---
 
