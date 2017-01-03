@@ -3,7 +3,7 @@
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
-<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.0.0-screenshot.png"></a>
+<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.1.0-screenshot.png"></a>
 
 ## Docs
 
