@@ -46,9 +46,9 @@ OR
   &#160;&#160;&#160;&#160;**imagesLoadedQueryDuration:** 2500, *// Duration to check for images that have finished loading after instantiation (milliseconds).*  
   &#160;&#160;&#160;&#160;**imagesLoadedQueryFrequency:** 100, *// Frequency to check for images that have loaded within the imagesLoadedQueryDuration (milliseconds)*  
   &#160;&#160;&#160;&#160;**dragAndDrop:** false, *// Enable drag n' drop*  
-  &#160;&#160;&#160;&#160;**dragAndDropAutoDelay:** 1000,*// Enable automatic/previewing drag n' drop by setting a delay (milliseconds)*  
+  &#160;&#160;&#160;&#160;**dragAndDropAutoDelay:** 1000, *// Enable automatic/previewing drag n' drop by setting a delay (milliseconds)*  
   &#160;&#160;&#160;&#160;**eventResetDelay:** 0, *// Delay to call reset when an element with the "flagstone-reset" class is triggered (important when resizing CSS animations are used)*  
-  &#160;&#160;&#160;&#160;**eventResizeDuration:** 250,*// Animation duration when an element with the "flagstone-resize" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called)*  
+  &#160;&#160;&#160;&#160;**eventResizeDuration:** 250, *// Animation duration when an element with the "flagstone-resize" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called)*  
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {} *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
 **});**
 </sub>
