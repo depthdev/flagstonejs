@@ -27,6 +27,7 @@ OR
 
 OR
 
+<sub>
 **const fs = flagstone({**  
   &#160;&#160;&#160;&#160;**elem:** document.getElementsByTagName('article')[0], *// Wrapping element*  
   &#160;&#160;&#160;&#160;**bedPadding:** 10, *// The padding around the area edge*  
@@ -50,6 +51,7 @@ OR
   &#160;&#160;&#160;&#160;**eventResizeDuration:** 250,*// Animation duration when an element with the "flagstone-resize" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called)*  
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {} *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
 **});**
+</sub>
 
 ---
 
