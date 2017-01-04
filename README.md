@@ -3,7 +3,7 @@
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
-<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.1.0-screenshot.png"></a>
+<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.2.0-screenshot.png"></a>
 
 ## Docs
 
@@ -45,7 +45,9 @@ OR
   &#160;&#160;&#160;&#160;**imagesLoadedQueryDuration:** 2500, *// Duration to check for images that have finished loading after instantiation (milliseconds).*  
   &#160;&#160;&#160;&#160;**imagesLoadedQueryFrequency:** 100, *// Frequency to check for images that have loaded within the imagesLoadedQueryDuration (milliseconds)*  
   &#160;&#160;&#160;&#160;**dragAndDrop:** false, *// Enable drag n' drop*  
-  &#160;&#160;&#160;&#160;**eventResetDelay:** 0, *// Delay to call reset when an element with "flagstone-reset" is triggered (important when resizing CSS animations are used)*  
+  &#160;&#160;&#160;&#160;**dragAndDropAutoDelay:** 1000,*// Enable automatic/previewing drag n' drop by setting a delay (milliseconds)*  
+  &#160;&#160;&#160;&#160;**eventResetDelay:** 0, *// Delay to call reset when an element with the "flagstone-reset" class is triggered (important when resizing CSS animations are used)*  
+  &#160;&#160;&#160;&#160;**eventResizeDuration:** 250,*// Animation duration when an element with the "flagstone-resize" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called)*  
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {} *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
 **});**
 
@@ -61,7 +63,6 @@ Allows the developer to provide options to the user to change settings on the fl
 &#160;&#160;&#160;&#160;**stonesMargin:** 10,  
 &#160;&#160;&#160;&#160;**minWidth:** 280,  
 &#160;&#160;&#160;&#160;**maxColumns:** 5,  
-&#160;&#160;&#160;&#160;**square:** false,  
 &#160;&#160;&#160;&#160;**dragAndDrop:** true,  
 &#160;&#160;&#160;&#160;**callback:** function(elem, index) {}  
 **});**
@@ -88,6 +89,9 @@ Hides the flagstone wrapper until re-calculation is complete; great before new c
 
 #### flagstone-remove
 Elements with the `flagstone-remove` class on them will cause the stone it's contained within to be removed from the DOM when *clicked*; or, when the *enter* or *space* keys are pressed.
+
+#### flagstone-resize
+Elements with the `flagstone-resize` class on them will cause "stones" below it to move with the developer-provided height changes of this targeted stone when *clicked*; or, when the *enter* or *space* keys are pressed.
 
 #### flagstone-reset
 Elements with the `flagstone-reset` class on them will trigger a soft reset when *clicked*; or, when the *enter* or *space* keys are pressed.
