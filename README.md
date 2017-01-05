@@ -3,7 +3,7 @@
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
-<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.2.0-screenshot.png"></a>
+<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.3.0-screenshot.png"></a>
 
 ## Docs
 
@@ -35,6 +35,7 @@ OR
   &#160;&#160;&#160;&#160;**margin:** 10, *// This overrides bedPadding &#38; stonesMargin and is equivalent to setting them both to this value*  
   &#160;&#160;&#160;&#160;**minWidth:** 280, *// Minimum width you want an element to be*  
   &#160;&#160;&#160;&#160;**maxColumns:** 5, *// Maximum number of columns to display*  
+  &#160;&#160;&#160;&#160;**flow:** false, *// Flows the stone widths on resize; but, harder to read flowing text during animation*  
   &#160;&#160;&#160;&#160;**direction:** 'left', *// Alternative is "right"*  
   &#160;&#160;&#160;&#160;**random:** false, *// Display stones in a random order*  
   &#160;&#160;&#160;&#160;**square:** false, *// Makes each flagstone square*  
@@ -93,7 +94,9 @@ Hides the flagstone wrapper until re-calculation is complete; great before new c
 Elements with the `flagstone-remove` class on them will cause the stone it's contained within to be removed from the DOM when *clicked*; or, when the *enter* or *space* keys are pressed.
 
 #### flagstone-resize
-Elements with the `flagstone-resize` class on them will cause "stones" below it to move with the developer-provided height changes of this targeted stone when *clicked*; or, when the *enter* or *space* keys are pressed.
+Elements with the `flagstone-resize` class on them will cause "stones" below it to move with the developer-provided height changes of this targeted stone when *clicked*; or, when the *enter* or *space* keys are pressed.  
+
+IMPORTANT: Size changes cannot be read accurately if and when Flagstone listeners attach *after* your developer resize function listeners. To fix this issue, set your methods in a short `setTimeout` callback, and set the Flagstone `eventResizeDuration` property to an appropriate range to notice the change, say, `100` ms.
 
 #### flagstone-reset
 Elements with the `flagstone-reset` class on them will trigger a soft reset when *clicked*; or, when the *enter* or *space* keys are pressed.
