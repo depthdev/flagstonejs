@@ -103,7 +103,17 @@ Elements with the `flagstone-reset` class on them will trigger a soft reset when
 
 ---
 
-### Other
+### DRAG AND DROP
+
+#### Classes conditionally added to the *bed* wrapper:
+* `flagstone-dragover` *Applied when a stone is dragged over the bed, and not a another stone*
+
+#### Classes conditionally added to the *stone* elements:
+* `flagstone-drag` *Applied when the drag starts*
+* `flagstone-dragover` *Applied to the stone that's under the dragging mouse*
+* `flagstone-left` *Applied when the dragging mouse is on the left side of a another stone; suggesting the future drop position*
+* `flagstone-right` *Applied when the dragging mouse is on the right side of a another stone; suggesting the future drop position*
+
 #### Example styling for drag and drop:
 **.flagstone-0-bed.flagstone-dragover {**  
 &#160;&#160;&#160;&#160;box-shadow: inset 0 0 4px 4px #fff;  
