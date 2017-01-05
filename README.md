@@ -116,15 +116,15 @@ Elements with the `flagstone-reset` class on them will trigger a soft reset when
 
 #### Example styling for drag and drop:
 **.flagstone-0-bed.flagstone-dragover {**  
-&#160;&#160;&#160;&#160;box-shadow: inset 0 0 4px 4px #fff;  
+&#160;&#160;&#160;&#160;box-shadow: inset 0 0 4px 4px #ff0;  
 **}**  
 **.flagstone-drag {**  
 &#160;&#160;&#160;&#160;filter: grayscale(1) blur(4px);  
 &#160;&#160;&#160;&#160;opacity: 0.25;  
 **}**  
 **.flagstone-left {**  
-&#160;&#160;&#160;&#160;box-shadow: -8px 0 4px -4px #fff;  
+&#160;&#160;&#160;&#160;box-shadow: -8px 0 4px -4px #ff0;  
 **}**  
 **.flagstone-right {**  
-&#160;&#160;&#160;&#160;box-shadow: 8px 0 4px -4px #fff;  
+&#160;&#160;&#160;&#160;box-shadow: 8px 0 4px -4px #ff0;  
 **}**
