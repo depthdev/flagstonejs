@@ -128,3 +128,16 @@ Elements with the `flagstone-reset` class on them will trigger a soft reset when
 **.flagstone-right {**  
 &#160;&#160;&#160;&#160;box-shadow: 8px 0 4px -4px #ff0;  
 **}**
+
+---
+
+### CUSTOM ANIMATION
+If you want to add additional transition animations to the stones' CSS, you must *also* re-add the plugin's generated styles.
+
+EXAMPLE: Let's say you want to tranistion the height of your stones. In the example below, we'll assume you set your `direction` to `'left'` (which is the default), `animationDuration` to `1000`, and your `animationTimingFunction` to `'ease'` when you instantiated your Flagstone instance:
+
+**.a-class-on-each-stone {** transition: top 1s ease, left 1s ease, right 1s ease*, height 0.25s linear*; **}**
+
+&#160;&#160;&#160;&#160;...and now if you had `flow` set to `true` when you instantiated your Flagstone instance:
+
+**.a-class-on-each-stone {** transition: top 1s ease, left 1s ease, right 1s ease, width 1s ease*, height 0.25s linear*; **}**
