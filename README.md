@@ -96,7 +96,7 @@ Elements with the `flagstone-remove` class on them will cause the stone it's con
 #### flagstone-resize
 Elements with the `flagstone-resize` class on them will cause "stones" below it to move with the developer-provided height changes of this targeted stone when *clicked*; or, when the *enter* or *space* keys are pressed.  
 
-IMPORTANT: Size changes cannot be read accurately if and when Flagstone listeners attach *after* your developer resize function listeners. To fix this issue, set your methods in a short `setTimeout` callback, and set the Flagstone `eventResizeDuration` property to an appropriate range to notice the change, say, `100` ms.
+IMPORTANT: Size changes cannot be read accurately if and when Flagstone listeners attach *after* your developer resize function listeners. To fix this issue, set your methods in a timeless `setTimeout` callback, and set the Flagstone `eventResizeDuration` property to the animation duration your CSS or JS animation will be running for.
 
 #### flagstone-reset
 Elements with the `flagstone-reset` class on them will trigger a soft reset when *clicked*; or, when the *enter* or *space* keys are pressed.
