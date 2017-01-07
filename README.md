@@ -3,7 +3,7 @@
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
-<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.3.0-screenshot.png"></a>
+<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.3.2-screenshot.png"></a>
 
 ## Docs
 
@@ -141,3 +141,8 @@ EXAMPLE: Let's say you want to transition the height of your stones. In the exam
 &#160;&#160;&#160;&#160;...and now if you had `flow` set to `true` when you instantiated your Flagstone instance:
 
 **.a-class-on-each-stone {** transition: top 1s ease, left 1s ease, width 1s ease*, height 0.25s linear*; **}**
+
+---
+
+### BROWSER SUPPORT
+Modern browsers (including IE10+) and mobile support (minus drag and drop).
