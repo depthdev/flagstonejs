@@ -11,8 +11,9 @@
 
 ---
 
-### Hide the content
-For instances with large amounts of "stones," it's recommended that you hard code this attribute and style: `style="visibility:hidden;"`.
+### Optional Recommended Actions
+* For instances with large amounts of "stones," it's recommended that you hard code this attribute and style to the Flagstone element: `style="visibility:hidden;"`.  
+* For a quicker visual setup, make sure the webpage *always* or *never* has a scrollbar.
 
 ---
 
