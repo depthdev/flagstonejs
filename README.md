@@ -120,7 +120,7 @@ NOTE: Touch only supports dropping a stone before another; unlike the mouse, whi
 * `flagstone-drag` *Applied when the drag starts*
 * `flagstone-dragover` *Applied to the stone that's under the dragging mouse*
 * `flagstone-left` *Applied when the dragging mouse is on the left side of a another stone; suggesting the future drop position*
-    * Touch only supports dropping a stone before another
+    * FYI: Touch only supports dropping a stone before another
 * `flagstone-right` *Applied when the dragging mouse is on the right side of a another stone; suggesting the future drop position*
     * N/A for touch
 
@@ -155,4 +155,4 @@ EXAMPLE: Let's say you want to transition the height of your stones. In the exam
 ---
 
 ### BROWSER SUPPORT
-Modern browsers (including IE10+) and mobile support (minus drag and drop).
+Modern browsers (including IE10+) and mobile support.
