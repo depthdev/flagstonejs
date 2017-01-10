@@ -1,5 +1,5 @@
 # FlagstoneJS
-## Dynamic &#38; responsive tiling
+<summary>Dynamic &#38; responsive tiling</summary>
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
@@ -69,6 +69,7 @@ Allows the developer to provide options to the user to change settings on the fl
 &#160;&#160;&#160;&#160;**minWidth:** 280,  
 &#160;&#160;&#160;&#160;**maxColumns:** 5,  
 &#160;&#160;&#160;&#160;**dragAndDrop:** true,  
+&#160;&#160;&#160;&#160;**dropCallback:** function(elem, index) {},  
 &#160;&#160;&#160;&#160;**callback:** function(elem, index) {}  
 **});**
 
@@ -109,15 +110,19 @@ IMPORTANT: Size changes cannot be read accurately if and when Flagstone listener
 ---
 
 ### DRAG AND DROP
+NOTE: Touch only supports dropping a stone before another; unlike the mouse, which supports dropping before/after any stone and onto the bed itself.
 
 #### Classes conditionally added to the *bed* wrapper:
 * `flagstone-dragover` *Applied when a stone is dragged over the bed, and not a another stone*
+    * N/A for touch
 
 #### Classes conditionally added to the *stone* elements:
 * `flagstone-drag` *Applied when the drag starts*
 * `flagstone-dragover` *Applied to the stone that's under the dragging mouse*
 * `flagstone-left` *Applied when the dragging mouse is on the left side of a another stone; suggesting the future drop position*
+    * Touch only supports dropping a stone before another
 * `flagstone-right` *Applied when the dragging mouse is on the right side of a another stone; suggesting the future drop position*
+    * N/A for touch
 
 #### Example styling for drag and drop:
 **.flagstone-0-bed.flagstone-dragover {**  
