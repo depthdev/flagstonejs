@@ -3,7 +3,7 @@
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
-<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.4.0-screenshot.png"></a>
+<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.5.0-screenshot.png"></a>
 
 ## Docs
 
@@ -51,7 +51,7 @@ OR
   &#160;&#160;&#160;&#160;**dragAndDropAutoDelay:** 0, *// Enable automatic/previewing drag n' drop by setting a delay (milliseconds)*  
   &#160;&#160;&#160;&#160;**dropCallback:** function(dragElem, targetElem) { return true; }, *// Drag and drop callback to manipulate the drag and target elements as well as accept or reject the drop with a return boolean*  
   &#160;&#160;&#160;&#160;**eventResetDelay:** 0, *// Delay to call reset when an element with the "flagstone-reset" class is triggered (important when resizing CSS animations are used)*  
-  &#160;&#160;&#160;&#160;**eventResizeDuration:** 0, *// Animation duration when an element with the "flagstone-resize" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called)*  
+  &#160;&#160;&#160;&#160;**eventResizeHeightDuration:** 0, *// Animation duration when an element with the "flagstone-resize-height" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called)*  
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {} *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
 **});**
 </sub>
@@ -77,6 +77,10 @@ Allows the developer to provide options to the user to change settings on the fl
 Removes Window resize event listener, and removes the styles from the document head.  
 **fs.destroy();**
 
+#### HIDE
+Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM. IMPORTANT: Generally speaking, most use cases are handled automatically.  
+**fs.hide();**
+
 #### RESET (Soft)
 Re-calculates sizes and spacing of existing stones. This is handled automatically on resize, and when an element with a class of `flagstone-reset` is selected.  
 **fs.reset();** // Good for adjusting static content.
@@ -85,16 +89,19 @@ Re-calculates sizes and spacing of existing stones. This is handled automaticall
 Finds stones anew, adds any applicable listeners, and resets all positions. IMPORTANT: In most cases, this will never be needed as DOM changes are being listened for already and will call this method automatically.  
 **fs.hardReset();**
 
-#### HIDE
-Hides the flagstone wrapper until re-calculation is complete; great before new content is injected into the DOM. IMPORTANT: Generally speaking, most use cases are handled automatically.  
-**fs.hide();**
+#### RESIZE HEIGHT
+Runs a watcher to move the elements directly under the provided element's ancestor stone element. See the `flagstone-resize-height` class for more details.  
+**fs.resizeHeight(*element*);**
 
 ---
 
 ### CLASSES
 
+#### flagstone-drag-handle
+Elements with the `flagstone-drag-handle` class on them designate the only drag-activating area. This can also be added to the stone itself if you want the entire stone to be draggable from anywhere on it. NOTE: This is required for drag and drop. This requires the `dragAndDrop` property to be set to `true` to function.
+
 #### flagstone-lock
-Stones with the `flagstone-lock` class on them will prevent them from being dragged, or from other stones being dragged over them&#8212;even if the `dragAndDrop` property is set to true.
+Stones with the `flagstone-lock` class on them will prevent them from being dragged, or from other stones being dragged over them&#8212;even if the `dragAndDrop` property is set to `true`.
 
 #### flagstone-remove
 Elements with the `flagstone-remove` class on them will cause the stone it's contained within to be removed from the DOM when *clicked*; or, when the *enter* or *space* keys are pressed.
@@ -102,27 +109,25 @@ Elements with the `flagstone-remove` class on them will cause the stone it's con
 #### flagstone-reset
 Elements with the `flagstone-reset` class on them will trigger a soft reset when *clicked*; or, when the *enter* or *space* keys are pressed.
 
-#### flagstone-resize
-Elements with the `flagstone-resize` class on them will cause "stones" below it to move with the developer-provided height changes of this targeted stone when *clicked*; or, when the *enter* or *space* keys are pressed.  
+#### flagstone-resize-height
+Elements with the `flagstone-resize-height` class on them will cause "stones" below it to move with the developer-provided height changes of this targeted stone when *clicked*; or, when the *enter* or *space* keys are pressed.  
 
-IMPORTANT: Size changes cannot be read accurately if and when Flagstone listeners attach *after* your developer resize function listeners. To fix this issue, set your methods in a timeless `setTimeout` callback, and set the Flagstone `eventResizeDuration` property to the animation duration your CSS or JS animation will be running for.
+IMPORTANT: Size changes cannot be read accurately if and when Flagstone listeners attach *after* your developer resize function listeners. To fix this issue, set your methods in a timeless `setTimeout` callback, and set the Flagstone `eventResizeHeightDuration` property to the animation duration your CSS or JS animation will be running for.
 
 ---
 
 ### DRAG AND DROP
-NOTE: Touch only supports dropping a stone before another; unlike the mouse, which supports dropping before/after any stone and onto the bed itself.
+
+REQUIRED: Stones must have the `flagstone-drag-handle` class on them; or, on an element inside them.
 
 #### Classes conditionally added to the *bed* wrapper:
 * `flagstone-dragover` *Applied when a stone is dragged over the bed, and not a another stone*
-    * N/A for touch
 
 #### Classes conditionally added to the *stone* elements:
 * `flagstone-drag` *Applied when the drag starts*
-* `flagstone-dragover` *Applied to the stone that's under the dragging mouse*
-* `flagstone-left` *Applied when the dragging mouse is on the left side of a another stone; suggesting the future drop position*
-    * FYI: Touch only supports dropping a stone before another
-* `flagstone-right` *Applied when the dragging mouse is on the right side of a another stone; suggesting the future drop position*
-    * N/A for touch
+* `flagstone-dragover` *Applied to the stone that's under the dragging mouse/touch*
+* `flagstone-left` *Applied when the dragging mouse/touch is on the left side of a another stone; suggesting the future drop position*
+* `flagstone-right` *Applied when the dragging mouse/touch is on the right side of a another stone; suggesting the future drop position*
 
 #### Example styling for drag and drop:
 **.flagstone-0-bed.flagstone-dragover {**  
