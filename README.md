@@ -3,7 +3,7 @@
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
-<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.5.0-screenshot.png"></a>
+<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.6.0-screenshot.png"></a>
 
 ## Docs
 
@@ -38,6 +38,7 @@ OR
   &#160;&#160;&#160;&#160;**maxColumns:** 5, *// Maximum number of columns to display*  
   &#160;&#160;&#160;&#160;**flow:** false, *// Flows the stone widths on resize; but, harder to read flowing text during animation*  
   &#160;&#160;&#160;&#160;**direction:** 'left', *// Alternative is "right"*  
+  &#160;&#160;&#160;&#160;**assignReverseZIndexes:** false, *// Auto DOM order z-indexing, or `true` for each stone to have a higher z-index than the previous stone  
   &#160;&#160;&#160;&#160;**random:** false, *// Display stones in a random order*  
   &#160;&#160;&#160;&#160;**square:** false, *// Makes each flagstone square*  
   &#160;&#160;&#160;&#160;**space:** false, *// Spaces out stones randomly*  
