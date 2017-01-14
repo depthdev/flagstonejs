@@ -119,7 +119,11 @@ IMPORTANT: Size changes cannot be read accurately if and when Flagstone listener
 
 ### DRAG AND DROP
 
-REQUIRED: Stones must have the `flagstone-drag-handle` class on them; or, on an element inside them.
+#### Handle
+Add a `flagstone-drag-handle` class anywhere on or inside a stone to limit where the drag behavior is allowed.
+
+#### Lock
+Prevent one or more stones from dragging even when `dragAndDrop` is set to `true` by adding a `flagstone-lock` class to them.
 
 #### Classes conditionally added to the *bed* wrapper:
 * `flagstone-dragover` *Applied when a stone is dragged over the bed, and not a another stone*
