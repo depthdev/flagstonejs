@@ -45,6 +45,8 @@ OR
   &#160;&#160;&#160;&#160;**spaceFrequency:** 0.4, *// Adjusts the frequency of the amount of spaces (as a float 0.0 - 1.0)*  
   &#160;&#160;&#160;&#160;**animationDuration:** 0, *// Animation duration (milliseconds)*  
   &#160;&#160;&#160;&#160;**animationTimingFunction:** 'linear', *// CSS animation timing function as a string*  
+  &#160;&#160;&#160;&#160;**heightAnimationDuration:** 0, *// Height animation duration (milliseconds)*  
+  &#160;&#160;&#160;&#160;**heightAnimationTimingFunction:** 'linear', *// Height CSS animation timing function as a string*  
   &#160;&#160;&#160;&#160;**resizeDelay:** 250, *// Delay to run resize/reset function after resizing the window (milliseconds)*  
   &#160;&#160;&#160;&#160;**imagesLoadedQueryDuration:** 2500, *// Duration to check for images that have finished loading after instantiation (milliseconds).*  
   &#160;&#160;&#160;&#160;**imagesLoadedQueryFrequency:** 100, *// Frequency to check for images that have loaded within the imagesLoadedQueryDuration (milliseconds)*  
@@ -52,7 +54,7 @@ OR
   &#160;&#160;&#160;&#160;**dragAndDropAutoDelay:** 0, *// Enable automatic/previewing drag n' drop by setting a delay (milliseconds)*  
   &#160;&#160;&#160;&#160;**dropCallback:** function(dragElem, targetElem) { return true; }, *// Drag and drop callback to manipulate the drag and target elements as well as accept or reject the drop with a return boolean*  
   &#160;&#160;&#160;&#160;**eventResetDelay:** 0, *// Delay to call reset when an element with the "flagstone-reset" class is triggered (important when resizing CSS animations are used)*  
-  &#160;&#160;&#160;&#160;**eventResizeHeightDuration:** 0, *// Animation duration when an element with the "flagstone-resize-height" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called)*  
+  &#160;&#160;&#160;&#160;**eventResizeHeightDuration:** 0, *// Animation duration when an element with the "flagstone-resize-height" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called) (milliseconds)*  
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {} *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
 **});**
 </sub>
