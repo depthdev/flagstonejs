@@ -135,7 +135,7 @@ Prevent one or more stones from dragging even when `dragAndDrop` is set to `true
 * `flagstone-right` *Applied when the dragging mouse/touch is on the right side of a another stone; suggesting the future drop position*
 
 #### Example styling for drag and drop:
-**.flagstone-0-bed.flagstone-dragover {**  
+**.a-class-on-your-flagstone-bed.flagstone-dragover {**  
 &#160;&#160;&#160;&#160;box-shadow: inset 0 0 4px 4px #ff0;  
 **}**  
 **.flagstone-drag {**  
@@ -151,16 +151,10 @@ Prevent one or more stones from dragging even when `dragAndDrop` is set to `true
 
 ---
 
-### CUSTOM ANIMATION
-**If you want to add additional transition animations to the stones' CSS, you must *also* re-add the plugin's generated styles.**
-
-EXAMPLE: Let's say you want to transition the height of your stones. In the example below, we'll assume you set your `direction` to `'left'` (which is the default), `animationDuration` to `1000`, and your `animationTimingFunction` to `'ease'` when you instantiated your Flagstone instance:
-
-**.a-class-on-each-stone {** transition: top 1s ease, left 1s ease*, height 0.25s linear*; **}**
-
-&#160;&#160;&#160;&#160;...and now if you had `flow` set to `true` when you instantiated your Flagstone instance:
-
-**.a-class-on-each-stone {** transition: top 1s ease, left 1s ease, width 1s ease*, height 0.25s linear*; **}**
+### ADDITIONAL ANIMATION
+Because of CSS cascading:
+* Any of your transition styles declared before the injected Flagstone styles appended to the head element will be replaced.
+* If adding transition styles *after* the Flagstone styles, you must also *re-add* the Flagstone generated styles.
 
 ---
 
