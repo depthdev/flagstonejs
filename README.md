@@ -54,7 +54,7 @@ OR
   &#160;&#160;&#160;&#160;**dragAndDropAutoDelay:** 0, *// Enable automatic/previewing drag n' drop by setting a delay (milliseconds)*  
   &#160;&#160;&#160;&#160;**dropCallback:** function(dragElem, targetElem) { return true; }, *// Drag and drop callback to manipulate the drag and target elements as well as accept or reject the drop with a return boolean*  
   &#160;&#160;&#160;&#160;**eventResetDelay:** 0, *// Delay to call reset when an element with the "flagstone-reset" class is triggered (important when resizing CSS animations are used)*  
-  &#160;&#160;&#160;&#160;**eventResizeHeightDuration:** 0, *// Animation duration when an element with the "flagstone-resize-height" class is triggered (important when resizing CSS animations are used and you don't want a reset to be called) (milliseconds)*  
+  &#160;&#160;&#160;&#160;**eventResizeHeightDuration:** 0, *// Animation duration when an element with the "flagstone-resize-height" class is triggered. (Important when resizing CSS animations are used and you don't want a reset to be called) (milliseconds). Increase time slightly if needed to compensate for event binding order.*  
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {}, *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
   &#160;&#160;&#160;&#160;**watch:** true, *// Calls a hard reset when a stone is added or removed*  
   &#160;&#160;&#160;&#160;**watchAll:** false *// Calls a hard reset when any element in the Flagstone bed is added or removed (not supported in <= IE10)*  
