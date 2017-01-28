@@ -3,7 +3,7 @@
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
-<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.7.2-screenshot.png"></a>
+<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.8.0-screenshot.png"></a>
 
 ## Docs
 
@@ -24,13 +24,12 @@ NOTE: Calling `flagstone()` returns a new Flagstone instance.
 
 OR
 
-`const fs = flagstone(document.getElementsByTagName('article')[1]); // Pass in the element to bootstrap`
+`const fs = flagstone(element); // Pass in the element to bootstrap`
 
-OR
+OR with options
 
 <sub>
-**const fs = flagstone({**  
-  &#160;&#160;&#160;&#160;**elem:** document.getElementsByTagName('article')[0], *// Wrapping element*  
+**const fs = flagstone(element** *// HTMLElement*, **{**  
   &#160;&#160;&#160;&#160;**bedPadding:** 10, *// The padding around the area edge*  
   &#160;&#160;&#160;&#160;**stonesMargin:** 10, *// Margin between stones*  
   &#160;&#160;&#160;&#160;**margin:** 10, *// This overrides bedPadding &#38; stonesMargin and is equivalent to setting them both to this value*  
