@@ -20,16 +20,16 @@
 ### Instantiate 1 or more Flagstone instances
 NOTE: Calling `flagstone()` returns a new Flagstone instance.
 
-`const fs = flagstone(); // Requires the wrapper element to have a class of ".flagstone" on it.`
+`const fs = flagstone(); // Requires the "bed" element to have a class of ".flagstone" on it.`
 
 OR
 
-`const fs = flagstone(element); // Pass in the element to bootstrap`
+`const fs = flagstone(element); // Pass in the "bed" element to bootstrap`
 
 OR with options
 
 <sub>
-**const fs = flagstone(element** *// HTMLElement*, **{**  
+**const fs = flagstone(element** *// The "bed" element*, **{**  
   &#160;&#160;&#160;&#160;**bedPadding:** 10, *// The padding around the area edge*  
   &#160;&#160;&#160;&#160;**stonesMargin:** 10, *// Margin between stones*  
   &#160;&#160;&#160;&#160;**margin:** 10, *// This overrides bedPadding &#38; stonesMargin and is equivalent to setting them both to this value*  
