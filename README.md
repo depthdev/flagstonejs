@@ -26,7 +26,7 @@ OR
 
 `const fs = flagstone(element); // Pass in the "bed" element to bootstrap`
 
-OR with options
+OR with one or more options
 
 <sub>
 **const fs = flagstone(element** *// The "bed" element*, **{**  
