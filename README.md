@@ -13,7 +13,7 @@
 
 ### Optional Recommended Actions
 * For instances with large amounts of "stones," it's recommended that you hard code this attribute and style to the Flagstone element: `style="visibility:hidden;"`.  
-* For a quicker visual setup, make sure the webpage *always* or *never* has a scrollbar.
+* For a quicker visual setup, make sure the webpage *always* or *never* has a scrollbar. An "always" CSS suggestion would be `body{min-height:101vh;}`.
 
 ---
 
@@ -56,7 +56,7 @@ OR with one or more options
   &#160;&#160;&#160;&#160;**eventResizeHeightDuration:** 0, *// Animation duration when an element with the "flagstone-resize-height" class is triggered. (Important when resizing CSS animations are used and you don't want a reset to be called) (milliseconds). Increase time slightly if needed to compensate for event binding order.*  
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {}, *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
   &#160;&#160;&#160;&#160;**watch:** true, *// Calls a hard reset when a stone is added or removed*  
-  &#160;&#160;&#160;&#160;**watchAll:** false *// Calls a hard reset when any element in the Flagstone bed is added or removed (not supported in <= IE10)*  
+  &#160;&#160;&#160;&#160;**watchAll:** false, *// Calls a hard reset when any element in the Flagstone bed is added or removed (not supported in <= IE10)*  
   &#160;&#160;&#160;&#160;**watchImages:** true *// Calls a soft reset when images have loaded. Browser will catch a src being set for the first time or changing after the fact if `watchAll` is set to `true` as well.  
 **});**
 </sub>
