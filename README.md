@@ -3,7 +3,7 @@
 
 [Demo](http://codepen.io/depthdev/pen/pNMOdd)
 
-<a href="http://codepen.io/depthdev/full/pNMOdd/" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.8.0-screenshot.png"></a>
+<a href="http://codepen.io/depthdev/pen/pNMOdd" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.9.0-screenshot.png"></a>
 
 ## Docs
 
@@ -24,7 +24,7 @@ NOTE: Calling `flagstone()` returns a new Flagstone instance.
 
 OR
 
-`const fs = flagstone(element); // Pass in the "bed" element to bootstrap`
+`const fs = flagstone(element || 'querySelector string'); // Pass in the "bed" element to bootstrap or a querySelector string`
 
 OR with one or more options
 
@@ -47,8 +47,8 @@ OR with one or more options
   &#160;&#160;&#160;&#160;**heightAnimationDuration:** 0, *// Height animation duration (milliseconds)*  
   &#160;&#160;&#160;&#160;**heightAnimationTimingFunction:** 'linear', *// Height CSS animation timing function as a string*  
   &#160;&#160;&#160;&#160;**resizeDelay:** 250, *// Delay to run resize/reset function after resizing the window (milliseconds)*  
-  &#160;&#160;&#160;&#160;**imagesLoadedQueryDuration:** 2500, *// Duration to check for images that have finished loading after instantiation (milliseconds).*  
-  &#160;&#160;&#160;&#160;**imagesLoadedQueryFrequency:** 100, *// Frequency to check for images that have loaded within the imagesLoadedQueryDuration (milliseconds)*  
+  <s>&#160;&#160;&#160;&#160;**imagesLoadedQueryDuration:** 2500, *// Duration to check for images that have finished loading after instantiation (milliseconds).*</s>  
+  <s>&#160;&#160;&#160;&#160;**imagesLoadedQueryFrequency:** 100, *// Frequency to check for images that have loaded within the imagesLoadedQueryDuration (milliseconds)*</s>  
   &#160;&#160;&#160;&#160;**dragAndDrop:** false, *// Enable drag n' drop*  
   &#160;&#160;&#160;&#160;**dragAndDropAutoDelay:** 0, *// Enable automatic/previewing drag n' drop by setting a delay (milliseconds)*  
   &#160;&#160;&#160;&#160;**dropCallback:** function(dragElem, targetElem) { return true; }, *// Drag and drop callback to manipulate the drag and target elements as well as accept or reject the drop with a return boolean*  
@@ -57,6 +57,7 @@ OR with one or more options
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {}, *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
   &#160;&#160;&#160;&#160;**watch:** true, *// Calls a hard reset when a stone is added or removed*  
   &#160;&#160;&#160;&#160;**watchAll:** false *// Calls a hard reset when any element in the Flagstone bed is added or removed (not supported in <= IE10)*  
+  &#160;&#160;&#160;&#160;**watchImages:** true *// Calls a soft reset when images have loaded. Browser will catch a src being set for the first time or changing after the fact if `watchAll` is set to `true` as well.  
 **});**
 </sub>
 
