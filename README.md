@@ -1,9 +1,9 @@
 # FlagstoneJS
 <summary>Dynamic &#38; responsive tiling, with drag &#38; drop, and touch support.<br><br>(Generically known as a JavaScript grid, or JavaScript tiling/tiles.)</summary>
 
-[Demo](http://codepen.io/depthdev/pen/pNMOdd)
+[Demo](http://depthdev.com/modules)
 
-<a href="http://codepen.io/depthdev/pen/pNMOdd" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.9.0-screenshot.png"></a>
+<a href="http://depthdev.com/modules" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.9.0-screenshot.png"></a>
 
 ## Docs
 
