@@ -28,7 +28,7 @@ OR
 
 OR with one or more options
 
-**const fs = flagstone(element** *// The "bed" element*, **{**  
+**const fs = flagstone(element** */\* The "bed" element \*/*, **{**  
   &#160;&#160;&#160;&#160;**bedPadding:** 10, *// The padding around the area edge*  
   &#160;&#160;&#160;&#160;**stonesMargin:** 10, *// Margin between stones*  
   &#160;&#160;&#160;&#160;**margin:** 10, *// This overrides bedPadding &#38; stonesMargin and is equivalent to setting them both to this value*  
