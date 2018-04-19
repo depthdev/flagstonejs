@@ -28,7 +28,6 @@ OR
 
 OR with one or more options
 
-<sub>
 **const fs = flagstone(element** *// The "bed" element*, **{**  
   &#160;&#160;&#160;&#160;**bedPadding:** 10, *// The padding around the area edge*  
   &#160;&#160;&#160;&#160;**stonesMargin:** 10, *// Margin between stones*  
@@ -59,7 +58,6 @@ OR with one or more options
   &#160;&#160;&#160;&#160;**watchAll:** false, *// Calls a hard reset when any element in the Flagstone bed is added or removed (not supported in <= IE10)*  
   &#160;&#160;&#160;&#160;**watchImages:** true *// Calls a soft reset when images have loaded. Browser will catch a src being set for the first time or changing after the fact if `watchAll` is set to `true` as well.  
 **});**
-</sub>
 
 ---
 
