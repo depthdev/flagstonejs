@@ -56,7 +56,7 @@ OR with one or more options
   &#160;&#160;&#160;&#160;**callback:** function(elem, index) {}, *// Callback to run against every element every time a soft reset is called. WARNING: If attaching listeners, you'll need to remove the listeners first to avoid stacks of listeners!*  
   &#160;&#160;&#160;&#160;**watch:** true, *// Calls a hard reset when a stone is added or removed*  
   &#160;&#160;&#160;&#160;**watchAll:** false, *// Calls a hard reset when any element in the Flagstone bed is added or removed (not supported in <= IE10)*  
-  &#160;&#160;&#160;&#160;**watchImages:** true *// Calls a soft reset when images have loaded. Browser will catch a src being set for the first time or changing after the fact if `watchAll` is set to `true` as well.  
+  &#160;&#160;&#160;&#160;**watchImages:** true // Calls a soft reset when images have loaded. Browser will catch a src being set for the first time or changing after the fact if `watchAll` is set to `true` as well.  
 **});**
 
 ---
