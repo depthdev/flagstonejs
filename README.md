@@ -3,7 +3,7 @@
 
 [Demo](http://depthdev.com/modules)
 
-<a href="http://depthdev.com/modules" target="_blank"><img src="http://cdn.depthdev.com/flagstone-3.9.0-screenshot.png"></a>
+<a href="http://depthdev.com/modules" target="_blank"><img src="http://cdn.depthdev.com/flagstone-4.0.0-screenshot.png"></a>
 
 ## Docs
 
@@ -166,4 +166,4 @@ Modern browsers (including IE10+) and mobile support.
 ---
 
 The MIT License (MIT)  
-Copyright (c) 2014-2017 Depth Development
+Copyright (c) 2014-2018 Depth Development
